@@ -15,6 +15,7 @@ It packages the reusable look and feel of a high-signal internal report format w
 - `docs/planning-separation.md` — how to keep planning libraries separate from the report surface.
 - `examples/tac-plan-html/` — full HTML TAC plan examples from recent commits; these are the style conformance authority for TAC-like outputs.
 - `docs/tac-plan-style-conformance.md` — palette, typography, interaction, and conformance rules extracted from those examples.
+- `skills/collapsible-report-kit/references/modular-design-system.md` - optional Modular Design System (MDS) guidance adapted to CRK's report tokens, native HTML, and TAC style contract.
 
 ## Quick start
 
@@ -101,6 +102,12 @@ The common lifecycle is: scope request → scope approval → implementation →
 ## Hermes skill
 
 This repo also includes `skills/collapsible-report-kit/SKILL.md`, a portable skill-style runbook for agents that need to create reports or bundles with this kit.
+
+## Modular Design System compatibility
+
+[Modular Design System (MDS) on Aura](https://www.aura.build/skills/8d9fe99f-a605-443f-9c32-98a84ed27f0f/modular-design-system-mds) fits CRK's token-based branding and reusable report structure. The [CRK adaptation](skills/collapsible-report-kit/references/modular-design-system.md) explains how to use its configuration and accessibility guidance while preserving the report shell.
+
+MDS is optional authoring guidance, not a runtime dependency or an automatic theme switcher. CRK keeps vanilla HTML/CSS/JavaScript, native `<details>`, and its existing visual defaults. TAC-style reports still follow `examples/tac-plan-html/`; MDS's general style bans and application presets do not override those examples. The adaptation includes pinned upstream provenance and the upstream MIT license.
 
 ## Notes
 
