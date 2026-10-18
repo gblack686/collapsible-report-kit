@@ -13,7 +13,11 @@
     "./css": "./src/report-style.css"
   },
   "scripts": {
-    "check": "node scripts/check-package.mjs"
+    "check": "node scripts/check-package.mjs && node scripts/examples.mjs check",
+    "test": "node --test tests/examples.test.mjs",
+    "gallery": "node scripts/examples.mjs gallery",
+    "examples": "node scripts/examples.mjs list",
+    "export:style-guide": "node scripts/examples.mjs export"
   },
   "keywords": [
     "report",
@@ -29,6 +33,9 @@
     "examples",
     "docs",
     "skills",
+    "scripts",
+    "tests",
+    "justfile",
     "README.md",
     "LICENSE"
   ]

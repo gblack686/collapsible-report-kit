@@ -1,7 +1,7 @@
 ---
 name: collapsible-report-kit
 description: Use when creating a branded but logo-free collapsible HTML report or report bundle with scope approval, implementation evidence, artifact links, and section explanations.
-version: 1.1.0
+version: 1.2.0
 author: Hermes Agent
 license: MIT
 metadata:
@@ -125,6 +125,24 @@ When the user supplies an MDS configuration, asks about MDS compatibility, or wa
 Use the existing report brief and confirmed brand choices; ask only for missing decisions that affect the requested output. Preserve native `<details>`, the report section grammar, and progressive enhancement. For TAC-style output, the TAC examples remain the visual authority, including their cream/terracotta palette, Inter + Newsreader, and section indexes. Apply custom branding within the user's requested scope.
 
 The reference is authoring guidance. It adds no configuration loader, category switcher, React/Tailwind dependency, or separate planning/approval process.
+
+## Example Review and Iteration
+
+When browsing, replacing, or extending the kit's examples, read
+[docs/example-workflow.md](../../docs/example-workflow.md). Run `just gallery`
+to open the catalog using the existing Expert Atlas Style Guide card and preview
+pattern. `just examples` lists stable IDs; `just example-new basic-report NAME`
+creates an editable variation without changing a visual authority file.
+
+Keep `examples/catalog.json` as the source of truth for titles, descriptions,
+preview paths, and showcase selection. Use `just preview-image ID IMAGE` to swap
+a local screenshot. Run `just check`, refresh, and inspect desktop/mobile output.
+An example or shared-style change invalidates its earlier review. Record only
+explicit per-example operator decisions through an exported gallery receipt and
+`just review-apply RECEIPT`; never approve samples on the operator's behalf.
+`just export-style-guide DESTINATION` refreshes the same collection in the
+existing guide. The two Atlas gallery entries are labeled style references,
+not completed CRK recipes.
 
 ## Verification Checklist
 

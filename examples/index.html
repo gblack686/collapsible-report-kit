@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRK example review gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/report-style.css">
+  <link rel="stylesheet" href="gallery.css">
+  <script type="module" src="../src/report-style.js"></script>
+  <script type="module" src="gallery.js"></script>
+</head>
+<body class="crk-document">
+  <div class="crk-topbar"><div class="crk-topbar-inner"><div class="crk-brand-lockup"><span class="crk-brand-mark">R</span><span class="crk-brand-text">Report Kit</span></div><div class="crk-source-name">Example review gallery</div></div></div>
+  <header class="crk-hero"><div><p class="crk-eyebrow">Style guide · CRK collection</p><h1>Review the examples</h1><p class="crk-subtitle">Every shipped report example, plus the two selected Expert Atlas gallery references. Preview a page, approve it or request changes, then export your decisions.</p><div class="crk-pills"><span class="crk-pill crk-pill-neutral"><span>Collection</span><strong id="example-total">Loading</strong></span><span class="crk-pill crk-pill-warm"><span>Review</span><strong id="review-count">No decisions yet</strong></span></div></div></header>
+  <main class="crk-layout"><aside class="crk-section-menu" data-crk-nav></aside><div class="crk-sections">
+    <details class="crk-section" open id="example-gallery"><summary><span class="crk-section-index">01</span><span class="crk-section-title">Example gallery</span><span class="crk-section-count">browse and review</span></summary><div class="crk-section-body">
+      <div class="review-toolbar">
+        <label>Search<input id="example-search" type="search" placeholder="Title, pattern, source…"></label>
+        <label>Type<select id="example-kind"><option value="">All examples</option><option value="starter">Starters</option><option value="tac">TAC visual authority</option><option value="reference">Gallery references</option></select></label>
+        <label>Review<select id="example-status"><option value="">All statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="revise">Changes requested</option></select></label>
+        <button id="export-review" type="button">Export review decisions</button>
+      </div>
+      <p id="gallery-summary" role="status">Loading examples. Use <code>just gallery</code> to serve this page over HTTP.</p>
+      <div class="style-library-grid" id="example-grid"></div>
+      <p id="gallery-empty" hidden>No matching examples. Try a different search or filter.</p>
+      <noscript><p>JavaScript enables the catalog and review controls. Open individual HTML files in this folder to read the reports.</p></noscript>
+    </div></details>
+    <details class="crk-section" id="review-workflow"><summary><span class="crk-section-index">02</span><span class="crk-section-title">How review and iteration work</span><span class="crk-section-count">edit · refresh · review</span></summary><div class="crk-section-body">
+      <p>Approve and Request changes save decisions in this browser. Export writes a portable JSON receipt. To record those exact decisions in CRK, run <code>just review-apply path/to/crk-example-review.json</code>. No example is approved automatically.</p>
+      <p>Editing an example, its metadata, preview, or shared report styles makes its earlier review stale. Refresh the gallery and review the changed page again. Reference approvals describe the selected style; they do not approve an unbuilt CRK recipe.</p>
+      <p>Clone a starter with <code>just example-new basic-report quarterly-review</code>, edit <code>examples/quarterly-review.html</code>, then run <code>just check</code> and refresh. Swap an image with <code>just preview-image quarterly-review path/to/preview.png</code>.</p>
+      <p>The card layout and preview flow reuse the existing Expert Atlas Style Guide. <code>examples/catalog.json</code> owns the records. <code>just export-style-guide</code> creates the same gallery as a portable collection for that guide.</p>
+    </div></details>
+  </div></main>
+  <footer class="crk-footer">Collapsible Report Kit · one catalog, shared with the style guide</footer>
+  <dialog id="example-inspector" aria-labelledby="inspector-title">
+    <header class="inspector-head"><h2 id="inspector-title">Example</h2><button id="inspector-close" type="button">Close</button></header>
+    <p id="inspector-description"></p>
+    <div id="inspector-preview"></div>
+    <p><a id="inspector-source" target="_blank" rel="noreferrer">Open full page ↗</a></p>
+    <label>Review note<textarea id="review-note" rows="2" placeholder="What should stay or change?"></textarea></label>
+    <div class="review-actions"><button type="button" id="approve-example">Approve</button><button type="button" id="revise-example">Request changes</button><button type="button" id="clear-decision">Clear decision</button><span id="inspector-status" role="status"></span></div>
+  </dialog>
+</body>
+</html>
