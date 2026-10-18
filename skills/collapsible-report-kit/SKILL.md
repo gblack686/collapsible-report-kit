@@ -1,7 +1,7 @@
 ---
 name: collapsible-report-kit
 description: Use when creating a branded but logo-free collapsible HTML report or report bundle with scope approval, implementation evidence, artifact links, and section explanations.
-version: 1.0.0
+version: 1.1.0
 author: Hermes Agent
 license: MIT
 metadata:
@@ -118,6 +118,14 @@ Override CSS variables instead of editing the core stylesheet:
 
 Use `.crk-brand-mark` for text initials or replace the lockup with your own logo image. Do not ship another company's logo in this public kit.
 
+## Optional Modular Design System Guidance
+
+When the user supplies an MDS configuration, asks about MDS compatibility, or wants a custom report theme, read [references/modular-design-system.md](references/modular-design-system.md). It adapts MDS's token configuration, reusable layouts, and accessibility review to CRK reports.
+
+Use the existing report brief and confirmed brand choices; ask only for missing decisions that affect the requested output. Preserve native `<details>`, the report section grammar, and progressive enhancement. For TAC-style output, the TAC examples remain the visual authority, including their cream/terracotta palette, Inter + Newsreader, and section indexes. Apply custom branding within the user's requested scope.
+
+The reference is authoring guidance. It adds no configuration loader, category switcher, React/Tailwind dependency, or separate planning/approval process.
+
 ## Verification Checklist
 
 - [ ] The report opens without JavaScript and uses native `<details>` sections.
@@ -127,4 +135,5 @@ Use `.crk-brand-mark` for text initials or replace the lockup with your own logo
 - [ ] The bundle manifest or README points to every artifact.
 - [ ] Print/PDF output is readable.
 - [ ] TAC-style outputs were compared against `examples/tac-plan-html/` and the palette/section grammar still match.
+- [ ] If MDS guidance was used, configuration choices map to existing CRK tokens and the report-specific checks in the reference were reviewed.
 - [ ] `npm run check` passes in this repository.
