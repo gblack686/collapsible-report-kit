@@ -154,7 +154,9 @@ Keep shared CSS changes deliberate because they affect all starter reports.
 Only explicitly reviewed format IDs are updated. Import validates the whole receipt
 before saving. Each decision is bound to a SHA-256 fingerprint of the format
 metadata, all of its example metadata/HTML/previews, and shared CSS/JS. Changed
-content makes the decision stale; refresh and review again. The gallery shows stale approvals as
+content makes the decision stale; refresh and review again. Text fingerprints
+normalize LF/CRLF so moving between Windows and macOS does not invalidate an
+otherwise identical review. The gallery shows stale approvals as
 pending. This is a local review receipt, not identity authentication or a
 cryptographic signature. Keep browser review state and exported receipts private
 until you intend to share them.
@@ -184,7 +186,8 @@ just export-style-guide "C:/work/gbautomation/artifacts/expert-atlas-netlify/sty
 
 The export contains the gallery, catalog, all local example HTML, previews,
 shared report assets, `atlas-style-library.js`, a review-data snapshot, and
-`crk-export.json` with source-file hashes. It works with any static HTTP host;
+`crk-export.json` with exported-file hashes. Text is emitted with LF line endings
+for consistent hashes across machines. It works with any static HTTP host;
 serve the whole bundle, not just its `index.html`. Example full-page links remain
 inside the bundle. Exporting does not publish or deploy anything.
 
