@@ -4,6 +4,13 @@ import path from 'node:path';
 const required = [
   'src/report-style.css',
   'src/report-style.js',
+  'justfile',
+  'scripts/examples.mjs',
+  'examples/index.html',
+  'examples/gallery.js',
+  'examples/gallery.css',
+  'examples/catalog.json',
+  'docs/example-workflow.md',
   'examples/basic-report.html',
   'examples/custom-brand.html',
   'examples/bundle-report.html',

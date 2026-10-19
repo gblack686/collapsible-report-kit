@@ -1,0 +1,127 @@
+{
+  "schema": "crk-examples.v1",
+  "formats": [
+    {
+      "id": "standard-report",
+      "title": "Standard collapsible report",
+      "description": "One reusable report format: editorial header, section navigation, native collapsible sections, metrics, and evidence. Content, branding, and TAC depth vary within this format.",
+      "representative": "basic-report",
+      "approval": "pending"
+    },
+    {
+      "id": "artifact-library",
+      "title": "Artifact library",
+      "description": "Distinct gallery body: editorial heading, count tiles, search and filter toolbar, lifecycle chips, preview-card grid, and inspector. Selected Atlas style reference.",
+      "representative": "atlas-artifact-library",
+      "approval": "pending"
+    },
+    {
+      "id": "landing-gallery",
+      "title": "Landing gallery",
+      "description": "Distinct landing gallery body: dark image field, Grid/Globe exploration, pan, orbit, zoom, and focus then inspect. Selected Atlas style reference.",
+      "representative": "atlas-landing-gallery",
+      "approval": "pending"
+    }
+  ],
+  "examples": [
+    {
+      "id": "basic-report",
+      "title": "Basic collapsible report",
+      "description": "Compact operations report with metrics, findings, and next steps.",
+      "source": "CRK",
+      "kind": "starter",
+      "path": "examples/basic-report.html",
+      "showcase": false,
+      "preview": "examples/previews/basic-report.jpg",
+      "format": "standard-report"
+    },
+    {
+      "id": "custom-brand",
+      "title": "Custom brand report",
+      "description": "The same report grammar with token-based brand overrides.",
+      "source": "CRK",
+      "kind": "starter",
+      "path": "examples/custom-brand.html",
+      "showcase": false,
+      "preview": "examples/previews/custom-brand.jpg",
+      "format": "standard-report"
+    },
+    {
+      "id": "bundle-report",
+      "title": "Report bundle",
+      "description": "Scope, approval state, provenance, and bundled evidence in one report.",
+      "source": "CRK",
+      "kind": "starter",
+      "path": "examples/bundle-report.html",
+      "showcase": false,
+      "preview": "examples/previews/bundle-report.jpg",
+      "format": "standard-report"
+    },
+    {
+      "id": "official-gbauto-tac-plan-template",
+      "title": "Official GBAuto TAC plan template",
+      "description": "Smallest canonical source reference for the approved plan shell, colors, typography, and collapsible details grammar.",
+      "source": "CRK / TAC",
+      "kind": "tac",
+      "path": "examples/tac-plan-html/official-gbauto-tac-plan-template.html",
+      "showcase": false,
+      "preview": "examples/previews/official-gbauto-tac-plan-template.jpg",
+      "format": "standard-report"
+    },
+    {
+      "id": "tac-exemplar-library",
+      "title": "TAC Exemplar Library",
+      "description": "Recent full-size TAC plan render with complete inline HTML/CSS and long-section behavior.",
+      "source": "CRK / TAC",
+      "kind": "tac",
+      "path": "examples/tac-plan-html/tac-exemplar-library.html",
+      "showcase": false,
+      "preview": "examples/previews/tac-exemplar-library.jpg",
+      "format": "standard-report"
+    },
+    {
+      "id": "job-outreach-pipeline",
+      "title": "Job Outreach Pipeline",
+      "description": "Recent production-style TAC plan with full plan depth, section density, pills, and report-scale typography.",
+      "source": "CRK / TAC",
+      "kind": "tac",
+      "path": "examples/tac-plan-html/job-outreach-pipeline.html",
+      "showcase": false,
+      "preview": "examples/previews/job-outreach-pipeline.jpg",
+      "format": "standard-report"
+    },
+    {
+      "id": "meet-transcript-pipeline-completion",
+      "title": "Meet Transcript Pipeline Completion",
+      "description": "Adopted-plan example showing approval-oriented copy and long implementation sections in the same visual shell.",
+      "source": "CRK / TAC",
+      "kind": "tac",
+      "path": "examples/tac-plan-html/meet-transcript-pipeline-completion.html",
+      "showcase": false,
+      "preview": "examples/previews/meet-transcript-pipeline-completion.jpg",
+      "format": "standard-report"
+    },
+    {
+      "id": "atlas-artifact-library",
+      "title": "Atlas artifact library",
+      "description": "Selected gallery body: search, counts, lifecycle filters, preview cards, and inspector. Style reference; CRK recipe remains a prototype.",
+      "source": "Expert Atlas",
+      "kind": "reference",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=artifacts",
+      "preview": "examples/previews/atlas-artifact-library.jpg",
+      "showcase": true,
+      "format": "artifact-library"
+    },
+    {
+      "id": "atlas-landing-gallery",
+      "title": "Atlas landing gallery",
+      "description": "Selected landing gallery body: dark image field with Grid/Globe, pan, orbit, zoom, and two-click inspection. Style reference; CRK recipe remains a prototype.",
+      "source": "Expert Atlas",
+      "kind": "reference",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=gallery",
+      "preview": "examples/previews/atlas-landing-gallery.jpg",
+      "showcase": true,
+      "format": "landing-gallery"
+    }
+  ]
+}

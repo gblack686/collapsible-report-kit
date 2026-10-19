@@ -19,6 +19,27 @@ It packages the reusable look and feel of a high-signal internal report format w
 
 ## Quick start
 
+To browse and approve the three unique formats, run `just gallery` (Node.js 20.11+ and
+[just](https://just.systems/); no npm install required). The gallery reuses the
+existing Expert Atlas Style Guide card and preview pattern. Review choices are
+explicit per format and can be exported as a JSON receipt. The standard
+collapsible report contains seven content examples; the artifact library and
+landing gallery are the other two formats. `just formats` shows this distinction.
+
+```sh
+just example-new basic-report quarterly-review
+just preview quarterly-review
+just preview-image quarterly-review path/to/screenshot.png
+just check
+just export-style-guide
+```
+
+See [the example workflow](docs/example-workflow.md) for content edits, preview
+swaps, comparing alternatives, approval import, and integrating the collection
+with the existing GBAuto Style Guide. `just` lists all recipes; Node/npm equivalents
+are documented there. Gallery reference cards distinguish the two selected Atlas
+body styles from released CRK recipes.
+
 ```html
 <link rel="stylesheet" href="src/report-style.css" />
 <script type="module" src="src/report-style.js"></script>

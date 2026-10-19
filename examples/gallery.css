@@ -1,0 +1,42 @@
+/* Reuses Expert Atlas Style Guide card layout (styles.css:3795-3992).
+   CRK tokens supply the host theme. Screenshot + review controls are additions. */
+.style-library-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.style-library-card{min-width:0;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--crk-line);border-radius:14px;background:rgba(255,255,255,.5);box-shadow:0 12px 28px rgba(58,48,36,.07);transition:transform 180ms ease,border-color 180ms ease,box-shadow 180ms ease}
+.style-library-card:hover{border-color:rgba(217,119,87,.52);box-shadow:0 18px 38px rgba(58,48,36,.11);transform:translateY(-2px)}
+.style-library-preview{position:relative;display:block;width:100%;height:190px;border:0;border-bottom:1px solid var(--crk-line);padding:0;overflow:hidden;background:var(--crk-panel);cursor:pointer;text-align:left}
+.style-library-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.style-library-preview iframe{width:1200px;height:760px;border:0;transform:scale(.3);transform-origin:top left;pointer-events:none}
+.preview-label{position:absolute;bottom:10px;left:10px;border-radius:6px;padding:5px 8px;background:var(--crk-bg);color:var(--crk-ink);font-size:11px;box-shadow:0 2px 12px #0002}
+.style-library-card-body{padding:19px;display:flex;flex:1;flex-direction:column}
+.style-library-card-body h3{margin:6px 0 9px;font-family:var(--crk-font-serif);font-size:23px;font-weight:400;letter-spacing:-.025em}
+.style-library-card-body>p:not(.crk-eyebrow){font-size:12px;line-height:1.65}
+.style-library-card-actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.style-library-card-actions a{text-decoration:none;font-size:12px}
+.review-toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:12px 0 18px}
+.review-toolbar label:first-child{flex:1 1 180px}
+.review-toolbar label{flex:0 1 160px}
+.review-toolbar input,.review-toolbar select{width:100%;min-width:0}
+.crk-document label{display:grid;gap:6px;font-size:12px}
+.crk-document input,.crk-document select,.crk-document textarea,.crk-document button{font:inherit}
+.review-toolbar input,.review-toolbar select,.crk-document textarea{padding:9px;border:1px solid var(--crk-line);border-radius:6px;background:var(--crk-bg);color:var(--crk-ink)}
+.review-toolbar button,.style-library-card-actions button,.inspector-head button,.review-actions button{padding:9px 12px;border:1px solid var(--crk-line);border-radius:6px;background:var(--crk-bg);color:var(--crk-ink);cursor:pointer;font-size:12px}
+.review-state{display:inline-flex;align-self:start;padding:4px 8px;border-radius:6px;background:var(--crk-panel)}
+.review-state[data-state=approved]{color:#2d7142;background:#e4f3e8}
+.review-state[data-state=revise]{color:#82580e;background:#fff0d8}
+.format-example-count{font-weight:600}
+#variant-selector[hidden]{display:none}
+#example-variant{width:100%;padding:9px;border:1px solid var(--crk-line);border-radius:6px;background:var(--crk-bg);color:var(--crk-ink);font:inherit}
+#example-inspector{width:min(1180px,95vw);max-height:94vh;padding:22px;border:1px solid var(--crk-line);border-radius:10px;background:var(--crk-bg);color:var(--crk-ink);overflow:auto}
+#example-inspector::backdrop{background:#19191988}
+.inspector-head{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.inspector-head h2{font:400 28px var(--crk-font-serif);margin:0}
+#inspector-preview iframe{display:block;width:100%;height:58vh;border:1px solid var(--crk-line);background:var(--crk-bg)}
+#inspector-preview img{display:block;max-width:100%;max-height:58vh;margin:auto;object-fit:contain}
+.review-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:12px}
+#approve-example{background:#e4f3e8;color:#2d7142}
+#inspector-status{font-size:12px}
+.crk-document button:focus-visible,.crk-document a:focus-visible{outline:2px solid var(--crk-accent-warm);outline-offset:3px}
+@media(max-width:1100px){.style-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.style-library-grid{grid-template-columns:1fr}.review-toolbar label{flex:1 1 100%}.review-toolbar button{width:100%}#example-inspector{padding:12px}.inspector-head h2{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.style-library-card{transition:none}.style-library-card:hover{transform:none}}
+@media print{.review-toolbar,.style-library-card-actions,#example-inspector{display:none}.style-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.style-library-card{break-inside:avoid;box-shadow:none}}
