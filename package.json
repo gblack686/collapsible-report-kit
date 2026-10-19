@@ -13,7 +13,7 @@
     "./css": "./src/report-style.css"
   },
   "scripts": {
-    "check": "node scripts/check-package.mjs && node scripts/examples.mjs check",
+    "check": "node scripts/check-package.mjs && node scripts/examples.mjs check && node scripts/style-guide-audit.mjs",
     "test": "node --test tests/examples.test.mjs",
     "gallery": "node scripts/examples.mjs gallery",
     "examples": "node scripts/examples.mjs list",

@@ -1,0 +1,2213 @@
+{
+  "schema": "crk-style-guide-sweep.v1",
+  "audited_on": "2026-10-18",
+  "source_repository": "gbauto/gbautomation",
+  "live_style_guide": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+  "live_index_sha256_lf": "d161a2108a14f7cd25452140726d0332bab517f4c0516e67f6628f74ecbfc256",
+  "counts": {
+    "page_formats": 8,
+    "visual_formats": 7,
+    "source_content_examples": 28,
+    "atlas_surfaces": 21,
+    "template_contracts": 3,
+    "canonical_pages": 4,
+    "canonical_svg_files": 10,
+    "catalog_svg_files": 83,
+    "component_records": 41
+  },
+  "format_coverage": [
+    {
+      "id": "standard-report",
+      "title": "Standard collapsible report",
+      "scope": "page",
+      "examples": 7,
+      "availability": "shipped CRK report format"
+    },
+    {
+      "id": "artifact-library",
+      "title": "Artifact library",
+      "scope": "page",
+      "examples": 2,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "landing-gallery",
+      "title": "Landing gallery",
+      "scope": "page",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "landing-page",
+      "title": "Landing / campaign page",
+      "scope": "page",
+      "examples": 6,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "interactive-workspace",
+      "title": "Interactive workspace",
+      "scope": "page",
+      "examples": 2,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "onboarding-form",
+      "title": "Onboarding / form page",
+      "scope": "page",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "editorial-profile",
+      "title": "Editorial profile / resume",
+      "scope": "page",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "carousel-story",
+      "title": "Carousel story",
+      "scope": "page",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "visual-chart-pack",
+      "title": "Chart Pack",
+      "scope": "visual",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "visual-interactive-kanban",
+      "title": "Interactive Kanban",
+      "scope": "visual",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "visual-gantt-timeline",
+      "title": "Gantt Timeline",
+      "scope": "visual",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "visual-manim-motion",
+      "title": "Manim / Motion",
+      "scope": "visual",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "visual-mermaid-dag",
+      "title": "Mermaid DAG",
+      "scope": "visual",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "visual-sankey-flow",
+      "title": "Sankey / 3D Flow",
+      "scope": "visual",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    },
+    {
+      "id": "visual-bokeh-crossfilter",
+      "title": "Bokeh Crossfilter",
+      "scope": "visual",
+      "examples": 1,
+      "availability": "existing-source reference; portable CRK recipe/renderer not claimed"
+    }
+  ],
+  "atlas_surfaces": [
+    {
+      "id": "social-productivity-carousel",
+      "title": "Social Productivity Carousel",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/social-productivity-carousel.html",
+      "classification": "page-format",
+      "reuse": "Existing swipe-based narrative; one story format.",
+      "format_id": "carousel-story",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/social-productivity-carousel.html",
+      "index_category": "campaigns"
+    },
+    {
+      "id": "portfolio-carousel-draft-cards",
+      "title": "Portfolio Draft Carousel",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/portfolio-carousel-draft-cards.html",
+      "classification": "section",
+      "reuse": "Reusable portfolio card carousel inside a page; do not count as another whole-page format.",
+      "format_id": null,
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/portfolio-carousel-draft-cards.html",
+      "index_category": "campaigns"
+    },
+    {
+      "id": "nexus-capital-landing",
+      "title": "Nexus Capital Landing",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/nexus-capital-landing.html",
+      "classification": "page-variant",
+      "reuse": "Reuse the existing landing/campaign structure; subject and visual treatment are variations.",
+      "format_id": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexus-capital-landing.html",
+      "index_category": "campaigns"
+    },
+    {
+      "id": "nexus-analytics-landing",
+      "title": "Nexus Analytics Landing",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/nexus-analytics-landing.html",
+      "classification": "page-variant",
+      "reuse": "Reuse the existing landing/campaign structure; subject and visual treatment are variations.",
+      "format_id": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexus-analytics-landing.html",
+      "index_category": "campaigns"
+    },
+    {
+      "id": "axisform-studio-landing",
+      "title": "Axisform Studio Landing",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/axisform-studio-landing.html",
+      "classification": "page-variant",
+      "reuse": "Reuse the existing landing/campaign structure; subject and visual treatment are variations.",
+      "format_id": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/axisform-studio-landing.html",
+      "index_category": "campaigns"
+    },
+    {
+      "id": "neon-oiran-landing",
+      "title": "Neon Oiran Campaign",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/neon-oiran-landing.html",
+      "classification": "page-variant",
+      "reuse": "Reuse the existing landing/campaign structure; subject and visual treatment are variations.",
+      "format_id": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/neon-oiran-landing.html",
+      "index_category": "campaigns"
+    },
+    {
+      "id": "aura-vr-landing",
+      "title": "Aura VR Agency",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/aura-vr-landing.html",
+      "classification": "page-variant",
+      "reuse": "Reuse the existing landing/campaign structure; subject and visual treatment are variations.",
+      "format_id": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/aura-vr-landing.html",
+      "index_category": "campaigns"
+    },
+    {
+      "id": "nexus-analytics-dashboard",
+      "title": "Nexus Analytics",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/nexus-analytics-dashboard.html",
+      "classification": "alias",
+      "reuse": "Its main HTML body is identical to nexus-analytics-landing. The index label is not proof of a separate dashboard format.",
+      "format_id": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexus-analytics-dashboard.html",
+      "index_category": "workspaces"
+    },
+    {
+      "id": "nexora-analytics",
+      "title": "Nexora Analytics",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/nexora-analytics.html",
+      "classification": "page-variant",
+      "reuse": "Reuse the existing landing/campaign structure; subject and visual treatment are variations. The full page is a product landing page with dashboard illustrations, not a standalone analytics workspace.",
+      "format_id": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexora-analytics.html",
+      "index_category": "workspaces"
+    },
+    {
+      "id": "ai-workflow-interface",
+      "title": "AI Workflow Interface",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/ai-workflow-interface.html",
+      "classification": "page-format",
+      "reuse": "Reuse the existing node workflow canvas and tool rail; reference only.",
+      "format_id": "interactive-workspace",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/ai-workflow-interface.html",
+      "index_category": "workspaces"
+    },
+    {
+      "id": "nexus-forge-workspace",
+      "title": "Nexus Forge Workspace",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/nexus-forge-workspace.html",
+      "classification": "page-variant",
+      "reuse": "Control panels and render canvas are another workspace example, not another report subject.",
+      "format_id": "interactive-workspace",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexus-forge-workspace.html",
+      "index_category": "workspaces"
+    },
+    {
+      "id": "testimonials-wall-of-love",
+      "title": "Wall of Love",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/testimonials-wall-of-love.html",
+      "classification": "section",
+      "reuse": "Reusable testimonial wall / social proof section.",
+      "format_id": null,
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/testimonials-wall-of-love.html",
+      "index_category": "sections"
+    },
+    {
+      "id": "motion-asset-sync",
+      "title": "Motion Asset Sync",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/motion-asset-sync.html",
+      "classification": "visual-element",
+      "reuse": "Motion/asset sequence reference with a static and reduced-motion fallback; do not imply a Manim engine implementation.",
+      "format_id": "visual-manim-motion",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/motion-asset-sync.html",
+      "index_category": "sections"
+    },
+    {
+      "id": "operation-principles-section",
+      "title": "Logic of Operation",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/operation-principles-section.html",
+      "classification": "section",
+      "reuse": "Operating-principles section body for a landing page or report section.",
+      "format_id": null,
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/operation-principles-section.html",
+      "index_category": "sections"
+    },
+    {
+      "id": "headphone-product-grid",
+      "title": "Headphone Product Grid",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/headphone-product-grid.html",
+      "classification": "section",
+      "reuse": "Product-card grid is a gallery layout variant; keep commerce actions consumer-owned.",
+      "format_id": "artifact-library",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/headphone-product-grid.html",
+      "index_category": "sections"
+    },
+    {
+      "id": "expanding-feature-cards",
+      "title": "Expanding Feature Cards",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/expanding-feature-cards.html",
+      "classification": "section",
+      "reuse": "Expandable feature-card layout; retain keyboard and non-hover access.",
+      "format_id": "artifact-library",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/expanding-feature-cards.html",
+      "index_category": "sections"
+    },
+    {
+      "id": "master-strategy-infographic",
+      "title": "Master Strategy Infographic",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/master-strategy-infographic.html",
+      "classification": "visual-element",
+      "reuse": "Full-canvas infographic presentation reference; an embedded visual rather than another report format.",
+      "format_id": null,
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/master-strategy-infographic.html",
+      "index_category": "modals"
+    },
+    {
+      "id": "initialize-account",
+      "title": "Initialize Account",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/initialize-account.html",
+      "classification": "page-format",
+      "reuse": "Existing form page, despite its placement under modals in the old index. No account backend is copied.",
+      "format_id": "onboarding-form",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/initialize-account.html",
+      "index_category": "modals"
+    },
+    {
+      "id": "technical-brand-geometry",
+      "title": "Technical Brand Geometry",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/technical-brand-geometry.html",
+      "classification": "visual-element",
+      "reuse": "Brand geometry illustration / SVG reference; consumer branding stays optional.",
+      "format_id": null,
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/technical-brand-geometry.html",
+      "index_category": "modals"
+    },
+    {
+      "id": "imaginova-image-gallery",
+      "title": "Imaginova Image Gallery",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/imaginova-image-gallery.html",
+      "classification": "page-variant",
+      "reuse": "Image-led catalog variation within the gallery family, not a new format for each card density.",
+      "format_id": "artifact-library",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/imaginova-image-gallery.html",
+      "index_category": "modals"
+    },
+    {
+      "id": "strategic-roadmap",
+      "title": "Strategic Roadmap",
+      "source_path": "artifacts/expert-atlas-netlify/style-guide/library/strategic-roadmap.html",
+      "classification": "visual-element",
+      "reuse": "Roadmap illustration reference. Its canvas is not proof of a working scheduling or Gantt engine.",
+      "format_id": "visual-gantt-timeline",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/strategic-roadmap.html",
+      "index_category": "modals"
+    }
+  ],
+  "template_contracts": [
+    {
+      "id": "home-chat-gallery",
+      "title": "home chat gallery",
+      "source_path": "artifacts/gbauto-style-guide/templates/home-chat-gallery.html",
+      "classification": "candidate-page-format",
+      "reuse": "Approved parameter contract. Keep the existing source; extract/verify a portable body before claiming a CRK recipe. Composer plus discovery is an additional candidate page format; no live Atlas template URL was found.",
+      "format_id": null,
+      "record_shape": "hero + prompt input + featured gallery records",
+      "required_fields": [
+        "headline",
+        "subheadline",
+        "promptPlaceholder",
+        "items"
+      ],
+      "availability": "source-local; public /style-guide/templates URL returned 404"
+    },
+    {
+      "id": "gallery-5-columns-image-cards",
+      "title": "gallery 5 columns and image cards",
+      "source_path": "artifacts/gbauto-style-guide/templates/gallery-5-columns-image-cards.html",
+      "classification": "gallery-layout-variant",
+      "reuse": "Approved parameter contract. Keep the existing source; extract/verify a portable body before claiming a CRK recipe. Four versus five columns are variants within the gallery family.",
+      "format_id": "artifact-library",
+      "record_shape": "search/filter toolbar + five-column image-card gallery",
+      "required_fields": [
+        "title",
+        "items"
+      ],
+      "availability": "source-local; public /style-guide/templates URL returned 404"
+    },
+    {
+      "id": "gallery-4-columns-text-detail-cards",
+      "title": "gallery 4 columns text detail cards",
+      "source_path": "artifacts/gbauto-style-guide/templates/gallery-4-columns-text-detail-cards.html",
+      "classification": "gallery-layout-variant",
+      "reuse": "Approved parameter contract. Keep the existing source; extract/verify a portable body before claiming a CRK recipe. Four versus five columns are variants within the gallery family.",
+      "format_id": "artifact-library",
+      "record_shape": "search/filter toolbar + four-column dense text-detail cards",
+      "required_fields": [
+        "title",
+        "items"
+      ],
+      "availability": "source-local; public /style-guide/templates URL returned 404"
+    }
+  ],
+  "canonical_pages": [
+    {
+      "id": "resume",
+      "title": "Resume",
+      "source_path": "resources/skills/get-gbauto-theme/examples/resume.html",
+      "classification": "canonical-page-example",
+      "reuse": "Use as the existing house visual reference. Report variants do not create new formats.",
+      "format_id": "editorial-profile"
+    },
+    {
+      "id": "landing-page",
+      "title": "Landing Page",
+      "source_path": "resources/skills/get-gbauto-theme/examples/landing-page.html",
+      "classification": "canonical-page-example",
+      "reuse": "Use as the existing house visual reference. Report variants do not create new formats.",
+      "format_id": "landing-page"
+    },
+    {
+      "id": "collapsible-report-template",
+      "title": "Collapsible Report Template",
+      "source_path": "resources/skills/get-gbauto-theme/examples/collapsible-report-template.html",
+      "classification": "canonical-page-example",
+      "reuse": "Use as the existing house visual reference. Report variants do not create new formats.",
+      "format_id": "standard-report"
+    },
+    {
+      "id": "collapsible-report-mall",
+      "title": "Collapsible Report Mall",
+      "source_path": "resources/skills/get-gbauto-theme/examples/collapsible-report-mall.html",
+      "classification": "canonical-page-example",
+      "reuse": "Use as the existing house visual reference. Report variants do not create new formats.",
+      "format_id": "standard-report"
+    }
+  ],
+  "visual_formats": [
+    {
+      "id": "chart-pack",
+      "title": "Chart Pack",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "embedded-visual-format",
+      "reuse": "Up to six ECharts-style views in one report slot, with compact previews and a full-size modal. Reuse the existing guide sample; CRK records a reference, not a new renderer.",
+      "format_id": "visual-chart-pack",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "live_maturity": "CANONICAL",
+      "local_maturity": "Canonical",
+      "source_drift": false
+    },
+    {
+      "id": "interactive-kanban",
+      "title": "Interactive Kanban",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "embedded-visual-format",
+      "reuse": "A calm board summary with clickable tasks, typed gates, and a detail surface for ownership and evidence. Reuse the existing guide sample; CRK records a reference, not a new renderer.",
+      "format_id": "visual-interactive-kanban",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "live_maturity": "CANONICAL",
+      "local_maturity": "Canonical",
+      "source_drift": false
+    },
+    {
+      "id": "gantt-timeline",
+      "title": "Gantt Timeline",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "embedded-visual-format",
+      "reuse": "The recovered sprint-report timeline, modernized as an accessible HTML/SVG pattern rather than an approved engine. Reuse the existing guide sample; CRK records a reference, not a new renderer.",
+      "format_id": "visual-gantt-timeline",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "live_maturity": "PROVEN PROTOTYPE",
+      "local_maturity": "Proven prototype",
+      "source_drift": false
+    },
+    {
+      "id": "manim-motion",
+      "title": "Manim / Motion",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "embedded-visual-format",
+      "reuse": "A motion storyboard for the one high-level insight that earns animation. Reports retain a poster and written fallback. Reuse the existing guide sample; CRK records a reference, not a new renderer.",
+      "format_id": "visual-manim-motion",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "live_maturity": "CANONICAL LANE",
+      "local_maturity": "Canonical lane",
+      "source_drift": false
+    },
+    {
+      "id": "mermaid-dag",
+      "title": "Mermaid DAG",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "embedded-visual-format",
+      "reuse": "Timestamped task lineage with a collapsed source receipt and node details that stay readable without a diagram runtime. Reuse the existing guide sample; CRK records a reference, not a new renderer.",
+      "format_id": "visual-mermaid-dag",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "live_maturity": "CANONICAL",
+      "local_maturity": "Canonical",
+      "source_drift": false
+    },
+    {
+      "id": "sankey-flow",
+      "title": "Sankey / 3D Flow",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "embedded-visual-format",
+      "reuse": "Use wide paths when flow volume is the point. Three.js adds depth only when it improves stage comprehension. Reuse the existing guide sample; CRK records a reference, not a new renderer.",
+      "format_id": "visual-sankey-flow",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "live_maturity": "CANONICAL LANE",
+      "local_maturity": "Canonical lane",
+      "source_drift": false
+    },
+    {
+      "id": "bokeh-crossfilter",
+      "title": "Bokeh Crossfilter",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "embedded-visual-format",
+      "reuse": "Server-app interaction grammar: change one dimension and linked metrics, scatter points, and distributions update. Reuse the existing guide sample; CRK records a reference, not a new renderer.",
+      "format_id": "visual-bokeh-crossfilter",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "live_maturity": "PRIVATE PATTERN",
+      "local_maturity": "Private pattern",
+      "source_drift": false
+    }
+  ],
+  "canonical_svgs": [
+    {
+      "id": "01-agent-ribbon-flow.svg",
+      "title": "01 Agent Ribbon Flow",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/01-agent-ribbon-flow.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "02-token-streamgraph.svg",
+      "title": "02 Token Streamgraph",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/02-token-streamgraph.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "03-tool-chord-map.svg",
+      "title": "03 Tool Chord Map",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/03-tool-chord-map.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "04-evidence-contour-map.svg",
+      "title": "04 Evidence Contour Map",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/04-evidence-contour-map.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "05-latency-violin-lanes.svg",
+      "title": "05 Latency Violin Lanes",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/05-latency-violin-lanes.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "06-run-beeswarm.svg",
+      "title": "06 Run Beeswarm",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/06-run-beeswarm.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "07-risk-topographic-funnel.svg",
+      "title": "07 Risk Topographic Funnel",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/07-risk-topographic-funnel.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "08-memory-orbit-map.svg",
+      "title": "08 Memory Orbit Map",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/08-memory-orbit-map.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "09-eval-uncertainty-fan.svg",
+      "title": "09 Eval Uncertainty Fan",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/09-eval-uncertainty-fan.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "10-architecture-isobars.svg",
+      "title": "10 Architecture Isobars",
+      "source_path": "resources/skills/get-gbauto-theme/examples/svg/10-architecture-isobars.svg",
+      "classification": "canonical-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    }
+  ],
+  "svg_catalog": [
+    {
+      "id": "01-executive-status-stack.svg",
+      "title": "01 Executive Status Stack",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/01-executive-status-stack.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "02-deployment-gate-ladder.svg",
+      "title": "02 Deployment Gate Ladder",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/02-deployment-gate-ladder.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "03-system-boundary-map.svg",
+      "title": "03 System Boundary Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/03-system-boundary-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "04-context-to-proof-flow.svg",
+      "title": "04 Context To Proof Flow",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/04-context-to-proof-flow.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "05-telemetry-signal-map.svg",
+      "title": "05 Telemetry Signal Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/05-telemetry-signal-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "06-token-pressure-chart.svg",
+      "title": "06 Token Pressure Chart",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/06-token-pressure-chart.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "07-sprint-outcome-stack.svg",
+      "title": "07 Sprint Outcome Stack",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/07-sprint-outcome-stack.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "08-client-handoff-board.svg",
+      "title": "08 Client Handoff Board",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/08-client-handoff-board.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "09-risk-heatmap.svg",
+      "title": "09 Risk Heatmap",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/09-risk-heatmap.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "10-code-lens.svg",
+      "title": "10 Code Lens",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/10-code-lens.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "11-roadmap-alignment.svg",
+      "title": "11 Roadmap Alignment",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/11-roadmap-alignment.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "12-agent-runtime-lanes.svg",
+      "title": "12 Agent Runtime Lanes",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/12-agent-runtime-lanes.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "13-evidence-chain.svg",
+      "title": "13 Evidence Chain",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/13-evidence-chain.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "14-observability-gap.svg",
+      "title": "14 Observability Gap",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/14-observability-gap.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "15-multi-frame-story.svg",
+      "title": "15 Multi Frame Story",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/15-multi-frame-story.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "16-decision-brief.svg",
+      "title": "16 Decision Brief",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/16-decision-brief.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "17-workstream-swimlanes.svg",
+      "title": "17 Workstream Swimlanes",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/17-workstream-swimlanes.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "18-client-need-compass.svg",
+      "title": "18 Client Need Compass",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/18-client-need-compass.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "19-proof-vs-claim.svg",
+      "title": "19 Proof Vs Claim",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/19-proof-vs-claim.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "20-report-reading-path.svg",
+      "title": "20 Report Reading Path",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/20-report-reading-path.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "21-live-readiness-meter.svg",
+      "title": "21 Live Readiness Meter",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/21-live-readiness-meter.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "22-source-confidence.svg",
+      "title": "22 Source Confidence",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/22-source-confidence.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "23-report-package-map.svg",
+      "title": "23 Report Package Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/23-report-package-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "24-approval-comments.svg",
+      "title": "24 Approval Comments",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/24-approval-comments.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "25-visual-system-rules.svg",
+      "title": "25 Visual System Rules",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/25-visual-system-rules.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/01-agent-ribbon-flow.svg",
+      "title": "01 Agent Ribbon Flow",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/01-agent-ribbon-flow.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/01-sales-offer-ladder.svg",
+      "title": "01 Sales Offer Ladder",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/01-sales-offer-ladder.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/01-zoomable-agent-dag.svg",
+      "title": "01 Zoomable Agent Dag",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/01-zoomable-agent-dag.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/02-telemetry-waterfall.svg",
+      "title": "02 Telemetry Waterfall",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/02-telemetry-waterfall.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/02-time-to-first-win-map.svg",
+      "title": "02 Time To First Win Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/02-time-to-first-win-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/02-token-streamgraph.svg",
+      "title": "02 Token Streamgraph",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/02-token-streamgraph.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/03-client-portfolio-pressure.svg",
+      "title": "03 Client Portfolio Pressure",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/03-client-portfolio-pressure.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/03-token-cost-ribbon.svg",
+      "title": "03 Token Cost Ribbon",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/03-token-cost-ribbon.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/03-tool-chord-map.svg",
+      "title": "03 Tool Chord Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/03-tool-chord-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/04-agent-stage-heatmap.svg",
+      "title": "04 Agent Stage Heatmap",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/04-agent-stage-heatmap.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/04-evidence-contour-map.svg",
+      "title": "04 Evidence Contour Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/04-evidence-contour-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/04-sales-signal-radar.svg",
+      "title": "04 Sales Signal Radar",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/04-sales-signal-radar.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/05-handoff-sankey.svg",
+      "title": "05 Handoff Sankey",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/05-handoff-sankey.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/05-latency-violin-lanes.svg",
+      "title": "05 Latency Violin Lanes",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/05-latency-violin-lanes.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/05-proof-to-case-study-loop.svg",
+      "title": "05 Proof To Case Study Loop",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/05-proof-to-case-study-loop.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/06-radial-proof-timeline.svg",
+      "title": "06 Radial Proof Timeline",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/06-radial-proof-timeline.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/06-roadmap-revenue-streams.svg",
+      "title": "06 Roadmap Revenue Streams",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/06-roadmap-revenue-streams.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/06-run-beeswarm.svg",
+      "title": "06 Run Beeswarm",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/06-run-beeswarm.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/07-30-day-promise-clock.svg",
+      "title": "07 30 Day Promise Clock",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/07-30-day-promise-clock.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/07-code-review-lens.svg",
+      "title": "07 Code Review Lens",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/07-code-review-lens.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/07-risk-topographic-funnel.svg",
+      "title": "07 Risk Topographic Funnel",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/07-risk-topographic-funnel.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/08-consulting-pipeline-kanban.svg",
+      "title": "08 Consulting Pipeline Kanban",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/08-consulting-pipeline-kanban.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/08-memory-orbit-map.svg",
+      "title": "08 Memory Orbit Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/08-memory-orbit-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/08-report-package-minimap.svg",
+      "title": "08 Report Package Minimap",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/08-report-package-minimap.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/09-eval-uncertainty-fan.svg",
+      "title": "09 Eval Uncertainty Fan",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/09-eval-uncertainty-fan.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/09-proof-funnel-chart.svg",
+      "title": "09 Proof Funnel Chart",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/09-proof-funnel-chart.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/09-vertical-expert-market-map.svg",
+      "title": "09 Vertical Expert Market Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/09-vertical-expert-market-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/10-architecture-isobars.svg",
+      "title": "10 Architecture Isobars",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/10-architecture-isobars.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/10-observability-command-center.svg",
+      "title": "10 Observability Command Center",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/10-observability-command-center.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/10-sales-deck-argument-flow.svg",
+      "title": "10 Sales Deck Argument Flow",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/10-sales-deck-argument-flow.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/11-hermes-runtime-topology.svg",
+      "title": "11 Hermes Runtime Topology",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/11-hermes-runtime-topology.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/12-telegram-message-lifecycle.svg",
+      "title": "12 Telegram Message Lifecycle",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/12-telegram-message-lifecycle.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/13-memory-storage-quadrants.svg",
+      "title": "13 Memory Storage Quadrants",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/13-memory-storage-quadrants.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/14-gbauto-site-integration-loop.svg",
+      "title": "14 Gbauto Site Integration Loop",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/14-gbauto-site-integration-loop.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/15-agent-fleet-control-plane.svg",
+      "title": "15 Agent Fleet Control Plane",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/15-agent-fleet-control-plane.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/16-client-isolation-stack.svg",
+      "title": "16 Client Isolation Stack",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/16-client-isolation-stack.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/17-observability-data-plane.svg",
+      "title": "17 Observability Data Plane",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/17-observability-data-plane.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/18-tac-agent-team-dag.svg",
+      "title": "18 Tac Agent Team Dag",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/18-tac-agent-team-dag.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/19-secret-handoff-topology.svg",
+      "title": "19 Secret Handoff Topology",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/19-secret-handoff-topology.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/20-report-system-architecture.svg",
+      "title": "20 Report System Architecture",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/20-report-system-architecture.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--architecture-report--architecture-report-01-system-fit.svg",
+      "title": "Hyperframes  Architecture Report  Architecture Report 01 System Fit",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--architecture-report--architecture-report-01-system-fit.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--architecture-report--architecture-report-02-integration-map.svg",
+      "title": "Hyperframes  Architecture Report  Architecture Report 02 Integration Map",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--architecture-report--architecture-report-02-integration-map.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--architecture-report--architecture-report-03-change-boundary.svg",
+      "title": "Hyperframes  Architecture Report  Architecture Report 03 Change Boundary",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--architecture-report--architecture-report-03-change-boundary.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--build-report--build-report-01-code-integration.svg",
+      "title": "Hyperframes  Build Report  Build Report 01 Code Integration",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--build-report--build-report-01-code-integration.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--build-report--build-report-02-why-this-matters.svg",
+      "title": "Hyperframes  Build Report  Build Report 02 Why This Matters",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--build-report--build-report-02-why-this-matters.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--build-report--build-report-03-proof-next-steps.svg",
+      "title": "Hyperframes  Build Report  Build Report 03 Proof Next Steps",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--build-report--build-report-03-proof-next-steps.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-01-agent-dag.svg",
+      "title": "Hyperframes  Multi Agent Dag Report  Multi Agent Dag Report 01 Agent Dag",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-01-agent-dag.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-02-trace-format.svg",
+      "title": "Hyperframes  Multi Agent Dag Report  Multi Agent Dag Report 02 Trace Format",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-02-trace-format.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-03-gates-proof.svg",
+      "title": "Hyperframes  Multi Agent Dag Report  Multi Agent Dag Report 03 Gates Proof",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-03-gates-proof.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--prd--prd-01-product-intent.svg",
+      "title": "Hyperframes  Prd  Prd 01 Product Intent",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--prd--prd-01-product-intent.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--prd--prd-02-requirement-path.svg",
+      "title": "Hyperframes  Prd  Prd 02 Requirement Path",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--prd--prd-02-requirement-path.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--prd--prd-03-approval-readiness.svg",
+      "title": "Hyperframes  Prd  Prd 03 Approval Readiness",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--prd--prd-03-approval-readiness.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--sprint-report--sprint-report-01-sprint-goal.svg",
+      "title": "Hyperframes  Sprint Report  Sprint Report 01 Sprint Goal",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--sprint-report--sprint-report-01-sprint-goal.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--sprint-report--sprint-report-02-work-in-motion.svg",
+      "title": "Hyperframes  Sprint Report  Sprint Report 02 Work In Motion",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--sprint-report--sprint-report-02-work-in-motion.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--sprint-report--sprint-report-03-next-proof.svg",
+      "title": "Hyperframes  Sprint Report  Sprint Report 03 Next Proof",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--sprint-report--sprint-report-03-next-proof.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--telemetry-report--telemetry-report-01-signal-window.svg",
+      "title": "Hyperframes  Telemetry Report  Telemetry Report 01 Signal Window",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--telemetry-report--telemetry-report-01-signal-window.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--telemetry-report--telemetry-report-02-health-signal.svg",
+      "title": "Hyperframes  Telemetry Report  Telemetry Report 02 Health Signal",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--telemetry-report--telemetry-report-02-health-signal.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    },
+    {
+      "id": "imported/hyperframes--telemetry-report--telemetry-report-03-observability-gap.svg",
+      "title": "Hyperframes  Telemetry Report  Telemetry Report 03 Observability Gap",
+      "source_path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--telemetry-report--telemetry-report-03-observability-gap.svg",
+      "classification": "cataloged-visual-asset",
+      "reuse": "Reference the existing SVG catalog; do not maintain a second copied asset library.",
+      "format_id": null
+    }
+  ],
+  "components": [
+    {
+      "id": "ambient-glow",
+      "title": "Ambient glow",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.ambient`, `.g1`, `.g2`, `.gb-ambient`",
+      "notes": "Fixed terracotta glow layer behind page content."
+    },
+    {
+      "id": "watermark",
+      "title": "Watermark",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.watermark img`",
+      "notes": "`gb-signature.png`, grayscale, 3.5-4% opacity."
+    },
+    {
+      "id": "fixed-nav",
+      "title": "Fixed nav",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`header.nav`, `.nav-inner`, `.brand-lockup`, `.nav-links`, `.nav-cta`",
+      "notes": "Cream translucent nav, stone border, uppercase 11px links."
+    },
+    {
+      "id": "status-pill",
+      "title": "Status pill",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.status-pill`, `.ping`, `.t`",
+      "notes": "White/60 pill with terracotta ping dot and uppercase label."
+    },
+    {
+      "id": "hero-title",
+      "title": "Hero title",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`h1.name`, `.hero-title`",
+      "notes": "Newsreader, tight line-height, terracotta italic emphasis."
+    },
+    {
+      "id": "contact-card",
+      "title": "Contact card",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.contact-card.glass-panel`, `.contact-row`",
+      "notes": "Compact card with icon rows and CTA buttons."
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: Existing report controls; broader form/button states remain consumer references",
+      "format_id": null,
+      "selectors": "`.btn`, `.btn-primary`, `.btn-secondary`, `.hover-mini`",
+      "notes": "Pill or rounded-lg; primary ink fill, secondary white/invert."
+    },
+    {
+      "id": "highlight-metric",
+      "title": "Highlight metric",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: .crk-metric / .crk-grid-*",
+      "format_id": null,
+      "selectors": "`.highlights`, `.hl`, `.big`, `.lbl`",
+      "notes": "4-up stat tiles with Newsreader numerals."
+    },
+    {
+      "id": "section-heading",
+      "title": "Section heading",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: .crk-section-index / .crk-section-title",
+      "format_id": null,
+      "selectors": "`.sec-head`, `.num`, `.rule`",
+      "notes": "Mono terracotta index, Newsreader title, trailing rule."
+    },
+    {
+      "id": "skill-card",
+      "title": "Skill card",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.skill-card.glass-panel`, `.badge`, `.tags`",
+      "notes": "Icon badge plus compact tag cloud."
+    },
+    {
+      "id": "tag-chip",
+      "title": "Tag chip",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: .crk-chip-* / token overrides",
+      "format_id": null,
+      "selectors": "`.tag`, `.tag.key`, `.gb-tag`, `.gb-tag.key`",
+      "notes": "7px radius, stone border; key chips use terracotta tint."
+    },
+    {
+      "id": "experience-card",
+      "title": "Experience card",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.role.glass-panel.hover-shiny`, `.role-top`, `.role-co`, `.role-dates`, `.stack .sk`",
+      "notes": "Role cards use terracotta bullet dots and mono stack chips."
+    },
+    {
+      "id": "education-card",
+      "title": "Education card",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.edu.glass-panel`, `.sch`, `.deg`, `.yr`",
+      "notes": "Small glass panels with Newsreader school name."
+    },
+    {
+      "id": "footer-lockup",
+      "title": "Footer lockup",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.foot`, `.who`, `.nm`, `.meta`",
+      "notes": "Signature image plus uppercase metadata."
+    },
+    {
+      "id": "report-topbar",
+      "title": "Report topbar",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: .crk-topbar / .crk-brand-lockup",
+      "format_id": null,
+      "selectors": "`.topbar`, `.topbar-inner`, `.brand-lockup`, `.brand-logo`, `.source-name`",
+      "notes": "Sticky cream report chrome with GB logo image, not orange circle."
+    },
+    {
+      "id": "header",
+      "title": "Header",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: .crk-hero / .crk-pills",
+      "format_id": null,
+      "selectors": "`.eyebrow`, `h1`, `.subtitle`, `.taxonomy-pills`",
+      "notes": "Report title and metadata pills."
+    },
+    {
+      "id": "side-menu",
+      "title": "Side menu",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: [data-crk-nav] / report-style.js",
+      "format_id": null,
+      "selectors": "`.section-menu`, `.menu-title`, `.menu-actions`, `.toc`, `.toc-actions`",
+      "notes": "Sticky left navigation for long reports."
+    },
+    {
+      "id": "collapsible-section",
+      "title": "Collapsible section",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: details.crk-section",
+      "format_id": null,
+      "selectors": "`details.section`, `.section`, `.section-index`, `.section-title`, `.section-count`, `.section-body`",
+      "notes": "Primary report body pattern."
+    },
+    {
+      "id": "ops-accordion",
+      "title": "Ops accordion",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.gb-collapse`, `.gb-collapse-summary`, `.gb-collapse-region`, `.gb-collapse-body`",
+      "notes": "React-friendly version of the report section pattern."
+    },
+    {
+      "id": "status-chip",
+      "title": "Status chip",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "core-mapped",
+      "reuse": "CRK: .crk-chip-*",
+      "format_id": null,
+      "selectors": "`.chip-*`, `.gb-chip-*`",
+      "notes": "Green, amber, blue, red low-opacity status chips."
+    },
+    {
+      "id": "metadata-footer",
+      "title": "Metadata footer",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.metadata-footer`, `.metadata-grid`, `.report-metadata`",
+      "notes": "Bottom report provenance."
+    },
+    {
+      "id": "hypeframe-package",
+      "title": "Hypeframe package",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`.visual-package`, `.hypeframes`, `.hypeframe`, `.hypeframe-actions`",
+      "notes": "Report visual review/approval surface."
+    },
+    {
+      "id": "hero",
+      "title": "Hero",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`VideoHero.jsx`",
+      "notes": "Full-screen video/image background, cream overlay, watermark, fixed nav, status pill, Newsreader H1, ink CTA."
+    },
+    {
+      "id": "pricing-card",
+      "title": "Pricing card",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`Pricing.jsx`",
+      "notes": "`glass-panel p-8 rounded-3xl border border-[#D6D4C8] hover-shiny bg-[#E6E4D9]`."
+    },
+    {
+      "id": "pricing-icon-badge",
+      "title": "Pricing icon badge",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`Pricing.jsx`",
+      "notes": "Primary badge is `bg-[#D97757]/10 border-[#D97757]/20 text-[#D97757]`."
+    },
+    {
+      "id": "artifact-filter",
+      "title": "Artifact filter",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`ArtifactsGallery.jsx`",
+      "notes": "Active filter is ink fill/cream text; inactive is white/stone with terracotta hover border."
+    },
+    {
+      "id": "artifact-card",
+      "title": "Artifact card",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "component-reference",
+      "reuse": "Existing source component; optional consumer/profile/landing integration. No new runtime component is claimed.",
+      "format_id": null,
+      "selectors": "`ArtifactsGallery.jsx`",
+      "notes": "White card, stone border, square cream preview, terracotta uppercase type label."
+    },
+    {
+      "id": "guide-shell",
+      "title": "Shell",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Preserve the existing host navigation and CRK report shell.",
+      "format_id": null
+    },
+    {
+      "id": "guide-panels",
+      "title": "Panels",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "CRK sections/metric cards share tokens; glass/RGB edge variants stay optional.",
+      "format_id": null
+    },
+    {
+      "id": "guide-tables",
+      "title": "Tables",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Dedicated core table styling is a gap; TAC fixtures contain richer examples.",
+      "format_id": null
+    },
+    {
+      "id": "guide-buttons",
+      "title": "Buttons and form controls",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Core report actions exist; full input/validation language remains a source reference.",
+      "format_id": null
+    },
+    {
+      "id": "guide-charts",
+      "title": "Charts",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Seven visual-format samples are linked; renderer adapters remain separate.",
+      "format_id": null
+    },
+    {
+      "id": "guide-dashboards",
+      "title": "Dashboard skin",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Keep the existing native app navigation; CSS skin alone is not a tested dashboard page fixture.",
+      "format_id": null
+    },
+    {
+      "id": "guide-command-drawer",
+      "title": "Command drawer and keyboard access",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Reuse the existing Atlas drawer contract; feedback endpoints stay consumer-configured.",
+      "format_id": null
+    },
+    {
+      "id": "guide-preview-inspector",
+      "title": "Preview and inspector",
+      "source_path": "artifacts/expert-atlas-netlify/index.html",
+      "classification": "foundation-reference",
+      "reuse": "CRK gallery reuses the existing guide preview flow and adds local review receipts.",
+      "format_id": null
+    },
+    {
+      "id": "guide-motion-edge",
+      "title": "Shimmer, RGB edge, and reduced motion",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Preserve the style-guide source; keep effects optional and motion-safe.",
+      "format_id": null
+    },
+    {
+      "id": "guide-fingerprints",
+      "title": "GBR prompt fingerprints",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Reference the existing GBR-CORE/SHELL/PANEL/PILLS/CHART/SHINE/FOOTER/BLACKLIST guidance; current operator choices take priority.",
+      "format_id": null
+    },
+    {
+      "id": "guide-typography",
+      "title": "Typography",
+      "source_path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "classification": "foundation-reference",
+      "reuse": "Inter UI, Newsreader editorial headings, and mono metadata map to the existing CRK font tokens.",
+      "format_id": null
+    },
+    {
+      "id": "guide-palette",
+      "title": "Palette and semantic status",
+      "source_path": "second-brain/systems/brand/gbauto-brand-tokens.md",
+      "classification": "foundation-reference",
+      "reuse": "Cream, stone, ink, terracotta, and semantic status colors map to existing CRK tokens and TAC fixtures.",
+      "format_id": null
+    },
+    {
+      "id": "guide-layout",
+      "title": "Layout, density, and responsiveness",
+      "source_path": "artifacts/gbauto-style-guide/index.html",
+      "classification": "foundation-reference",
+      "reuse": "Existing shell/card/spacing rules are sources for report and consumer layouts; page families keep their own interaction grammar.",
+      "format_id": null
+    },
+    {
+      "id": "guide-brand-lockup",
+      "title": "Brand identity and logo suite",
+      "source_path": "resources/brand/logo-suite/README.md",
+      "classification": "foundation-reference",
+      "reuse": "Keep the existing logo suite as consumer branding authority; CRK stays logo-free by default.",
+      "format_id": null
+    }
+  ],
+  "source_files": [
+    {
+      "path": "artifacts/expert-atlas-netlify/app.js",
+      "sha256_lf": "8479df4aa2151bdc5c11ebd9d0b278dc4df8f4d562ad1c49db23090293e8839e"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/index.html",
+      "sha256_lf": "fab1f432d246fec98b63720d69c74b9ce4e0921748b068450f3129d195740f75"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/ai-workflow-interface.html",
+      "sha256_lf": "5246838720d4f620a060f6e5a8b603b799096cb7423f55b61f7e12de4ca49947"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/aura-vr-landing.html",
+      "sha256_lf": "144a31c8eb5b5d049aa313d468edde2c7e8d7735d5d96fcef86c52d81d3c92bf"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/axisform-studio-landing.html",
+      "sha256_lf": "543263021673f582791d073ae3e4d2d489748a73936260a21106689fd842f5c3"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/expanding-feature-cards.html",
+      "sha256_lf": "01a9537a320f059eebf7ba43ad8383474dd5749581d1ebbd8d0d119f18f883ab"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/gbauto-library-theme.css",
+      "sha256_lf": "1f4a696992b39fdea05921cb7fff0a9438438c247763c5e8b33445b8a1e55404"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/gbauto-library-theme.js",
+      "sha256_lf": "3924865bc5ebc8b99c00b5949442d13c98bc3f6aaaa8e6d84cfb2fea2274a7a8"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/headphone-product-grid.html",
+      "sha256_lf": "67dbfc0185ccbbaca1c6a986dddf33b86751e9337df78efd45bf8f0a63fa5c8d"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/imaginova-image-gallery.html",
+      "sha256_lf": "ce7ba7e5e5b0da05c96dd79001b96562f5a7c05dd3e46cb8bdf2d00ab2f90f65"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/initialize-account.html",
+      "sha256_lf": "f54acd836b6faca4fd2397cb9cacd2fe109bea145fd488cc9d32a4a88d21d142"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/master-strategy-infographic.html",
+      "sha256_lf": "44691f0947a29ca57c98e5f251f3f7634e04429f7909576feaad7dd7934b75bc"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/motion-asset-sync.html",
+      "sha256_lf": "9d0f3c53df31771377dd23332585b2b053559778ee2c1c6190ebfb3ad8347e5d"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/neon-oiran-landing.html",
+      "sha256_lf": "d65ab33c5f02c1d660c2672521eed90ed9cc8024270547271ab6835b446fe1ea"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/nexora-analytics.html",
+      "sha256_lf": "b51c44ef512522ab51855b827216c9c650ce1dab864fb5dc1c920cea489e2b96"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/nexus-analytics-dashboard.html",
+      "sha256_lf": "df380fa60e57597a49030ea7886f608d6bd9f5a1b993de750a364613d17e15f7"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/nexus-analytics-landing.html",
+      "sha256_lf": "be168ba487a54416ced69c76c759a871fff6ef8ad1371cd13caf8f7dd32370a2"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/nexus-capital-landing.html",
+      "sha256_lf": "7ed47a2af1fa3c5c82f5b0a2f666c19f818f8c0f17f632357b3d8ce2d5a67509"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/nexus-forge-workspace.html",
+      "sha256_lf": "3a9fef90b77a6c25e3634156dfddf106e3f13243d38d42cfb97499f9ae22e9ea"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/operation-principles-section.html",
+      "sha256_lf": "aaea5e57a868c925e23af9375c19a2fe14131f8fa4db804a24bcb0e5e3b6b3a7"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/portfolio-carousel-draft-cards.html",
+      "sha256_lf": "85b81df7a9fc06fd782aaf911777b490afc4182dc63dcc8cf231519abd7191ab"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/social-productivity-carousel.html",
+      "sha256_lf": "2ff472ca2c79dbbb5bba907bc77a642010e04349880164bb0bbfda21844aec1a"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/strategic-roadmap.html",
+      "sha256_lf": "d971b364c9ad8f9465828f5ba412d06aaaa9e962a13e266953fd8878c230b412"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/technical-brand-geometry.html",
+      "sha256_lf": "06f66d87c781cd7690a916163c997c5ddfa5818df6b435ccbd9451696cc949fd"
+    },
+    {
+      "path": "artifacts/expert-atlas-netlify/style-guide/library/testimonials-wall-of-love.html",
+      "sha256_lf": "55afb00b50d5b85ded926de2a7d99f6250270ec5a7456e1f6533fb72872470a5"
+    },
+    {
+      "path": "artifacts/gbauto-style-guide/index.html",
+      "sha256_lf": "976b4b49253395da341654912b18739673e783ac2fb8433f4a0f8619a1d0170b"
+    },
+    {
+      "path": "artifacts/gbauto-style-guide/templates/gallery-4-columns-text-detail-cards.html",
+      "sha256_lf": "1d4b6337c0845e0cad9492c0b03b4250f11399a89aef0f7216773dcf55d6294d"
+    },
+    {
+      "path": "artifacts/gbauto-style-guide/templates/gallery-5-columns-image-cards.html",
+      "sha256_lf": "34925941e29e884b07a33535f7152ce7674ad33097e6022fcbfd49bbf077d632"
+    },
+    {
+      "path": "artifacts/gbauto-style-guide/templates/home-chat-gallery.html",
+      "sha256_lf": "e258d72730d5f30b6d5d26b2ec3dcc5074a1bdddd7502cfd93f1962ca8fd4501"
+    },
+    {
+      "path": "artifacts/gbauto-style-guide/templates/template-parameters.json",
+      "sha256_lf": "25ce015e30c3f3a2605e9bc7be2a49c7a0db9cd2861112559ee06563e068bbe4"
+    },
+    {
+      "path": "resources/brand/logo-suite/README.md",
+      "sha256_lf": "bdc8330ea9d26702957eb503e9b639ef1f0326ea00a54b748dc9aa57fdb1450e"
+    },
+    {
+      "path": "resources/brand/logo-suite/renders/gb-logo-shine-demo.html",
+      "sha256_lf": "1559270a4803b55e3c796d72533f0855bbde77a2c422e0a68df6dd473eb51381"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/SKILL.md",
+      "sha256_lf": "8534cfb3c747ab158094c5aef73f942d74fd191c634f3524f654eef60ce16348"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/collapsible-report-mall.html",
+      "sha256_lf": "b51a1e854174a72df2440a1ba851cd16282153a38458341ea28e3e633ba0ee0f"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/collapsible-report-template.html",
+      "sha256_lf": "ebbdbed4b41a07bd879c020751bb4944462fe5126f32daecfcbf9d9e797cc875"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/landing-page.html",
+      "sha256_lf": "e4789419b44e2d607a6216ad0645997b3672b39beb058421b0bd93ee9c08cb77"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/resume.html",
+      "sha256_lf": "88577c8e1e618f141c2e7200d59cc7577f0d9deb3df36cfadd23b67207e8ffec"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/01-agent-ribbon-flow.svg",
+      "sha256_lf": "8df0d275aa544e239cd204731af00b01f54e40a87a398ce949711b5448bd7e91"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/02-token-streamgraph.svg",
+      "sha256_lf": "0d553ffc39e387830922e40db64614422bd29f40a0537cd3e26c4b86b75694bd"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/03-tool-chord-map.svg",
+      "sha256_lf": "185a5d27169a2108c542ac55773bb2250cd762df44cad268eb3b6a86867ea08f"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/04-evidence-contour-map.svg",
+      "sha256_lf": "d37fc474259d212625c5ee1d5740d32ac593db7a93477497f7ba90ec93634d8a"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/05-latency-violin-lanes.svg",
+      "sha256_lf": "a0060f6e5d7fb3654a6f6d2a81a82e0733834514e0c3ed789b6656fe442ac0c5"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/06-run-beeswarm.svg",
+      "sha256_lf": "3ab99727c8a52a3c8e2f39719894d57046575b63bd42c747f8aaff6d38624d3f"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/07-risk-topographic-funnel.svg",
+      "sha256_lf": "5c5d6a3427b6a300d7dc5b72055b03596001efdbcc1a74479ffb3e1e670ae8a3"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/08-memory-orbit-map.svg",
+      "sha256_lf": "071ddf932022b04e72a24a373b36bffb29bfd6c5ea5c42206a05128e250184d1"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/09-eval-uncertainty-fan.svg",
+      "sha256_lf": "5387b7d291d6225b801f13fb557777c36a3b09f4a8520c7fbbcb9a51f6c34050"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/examples/svg/10-architecture-isobars.svg",
+      "sha256_lf": "91117e6968f5f76bfae6a489c954052201c3d1c18c93da7740aeea869e99781b"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/references/gbauto-aura-dashboard-overrides.css",
+      "sha256_lf": "1c8c3ca42f2151dff0d2d56cec44b35ed8a917c8f15a20db631482580c9fcbfc"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/references/gbauto-component-inventory.md",
+      "sha256_lf": "4419fa10d19d60b45331576d0dc436a640414de8faeb7494a66bc94d38a07471"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/references/gbauto-component-prompt-packet.md",
+      "sha256_lf": "9992f36da9e48180bb431c68cdf1538b35741a4617a96320c5de1f6917a6f068"
+    },
+    {
+      "path": "resources/skills/get-gbauto-theme/references/gbauto-image2-fingerprints.md",
+      "sha256_lf": "353df051adc43018d2865d210f2510e53046895864a9b23ba2ac87745291492c"
+    },
+    {
+      "path": "resources/skills/tac-frontend-design/SKILL.md",
+      "sha256_lf": "844da6b1f7c11b079fa3efe8035bd732d4944de26082c9bda4240ef248a8ff5f"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/01-executive-status-stack.svg",
+      "sha256_lf": "6c3099c74b7ab3c65353b6838b22926de97a1f7f2c639f894e11b478a0df15f1"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/02-deployment-gate-ladder.svg",
+      "sha256_lf": "9610c7eee46838ad889098be748f202d9cae6b4bc2bf1785645195d4d3cca4c9"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/03-system-boundary-map.svg",
+      "sha256_lf": "d565e36a1d2bc93d1fd8d4a83556f1f20f7674dc49547f4749dcb695f500b5b2"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/04-context-to-proof-flow.svg",
+      "sha256_lf": "39a7f8342bede400837e94470dc2e74dcf41c9ce3e51737926ab2692f52867c9"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/05-telemetry-signal-map.svg",
+      "sha256_lf": "f93965028ff1bfd41a18e6135af1bbb80e1d7b9eca220e9b5d8945b99aa5eaca"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/06-token-pressure-chart.svg",
+      "sha256_lf": "e1bb9570d68644b855ec401886b624a613433ffc3f3c5699b024b67e53dc34a9"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/07-sprint-outcome-stack.svg",
+      "sha256_lf": "e9b74290730a3c20d29b5ec673fb0d9fdf55be44c28f8867ea51de7746cb711a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/08-client-handoff-board.svg",
+      "sha256_lf": "dbefcc89ae3b121a1a537370052df315c1b56b3d6ed6d4bead47037440920256"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/09-risk-heatmap.svg",
+      "sha256_lf": "57173b634672f96be512ac3ad45b4b405926888ff745eff2939e2f99cab6a67f"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/10-code-lens.svg",
+      "sha256_lf": "5420ce51dc1ca44223bb05f7aa3271797354b7f5488faff2af9d2e2ff0d1f26c"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/11-roadmap-alignment.svg",
+      "sha256_lf": "66f597d05e469a4cd85320e9283186609a3b7ed23fc69d73b6144b4aa4b3fa0a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/12-agent-runtime-lanes.svg",
+      "sha256_lf": "a7897dde015531db08a9f46b7c00dcf0e27f41485bce8403a01b746e002bd93e"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/13-evidence-chain.svg",
+      "sha256_lf": "c2415e0451b1cf107cff7f7efd8e676e486aab0a67381220a0c8b354fb7b7d03"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/14-observability-gap.svg",
+      "sha256_lf": "c6fa7ec7fd717ce06bf406199d1570ab01fddb921a35eeeb0db49a63104e78f5"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/15-multi-frame-story.svg",
+      "sha256_lf": "7cf4eb0c280334f8e4929bde600934b84f214206a1d589a3cb52d1e0d801821a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/16-decision-brief.svg",
+      "sha256_lf": "e64a403b0e627cc427795799c1caf4c9ba18be36780a86d5b3a458b16d8a8dd1"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/17-workstream-swimlanes.svg",
+      "sha256_lf": "8efb34c59f57653625e057f3ec595ab5829c53548e06e8dcafc33895cd20ab30"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/18-client-need-compass.svg",
+      "sha256_lf": "427a40597a93c1a522c8cf0b0105afba0cb7827d5ec28d76b8d42ff9cd1b0213"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/19-proof-vs-claim.svg",
+      "sha256_lf": "f43703a19a8e4db09efe030ce82eb3fedb634690f800300e7200a1c254683e7a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/20-report-reading-path.svg",
+      "sha256_lf": "4e2ad26cfb0ec5e3d15f7d3591ac8628c1c818365a11bd91514f53eb7c9c1ebc"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/21-live-readiness-meter.svg",
+      "sha256_lf": "5bdc92601c0f4b311b3de6424d075fc92f510abdb5a6e7bc51da3538334cf97f"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/22-source-confidence.svg",
+      "sha256_lf": "66459edb05b9a6a7cde2fee245bd91e72c5282cfa46af13929608da22dcdb855"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/23-report-package-map.svg",
+      "sha256_lf": "1064884d51705dcf6ef4d03fa0e64bb42cba4d0edaba757f7e4453b8955fc0e4"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/24-approval-comments.svg",
+      "sha256_lf": "5d7bbbacf11b0b607ea29f3ddc49bdbbb878be10da48620662f6b1a1944b24f1"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/25-visual-system-rules.svg",
+      "sha256_lf": "d167c34f27121b8fbf0498d0052c595728558bb4ccae806cef0b66f97d5cd586"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/01-agent-ribbon-flow.svg",
+      "sha256_lf": "8df0d275aa544e239cd204731af00b01f54e40a87a398ce949711b5448bd7e91"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/01-sales-offer-ladder.svg",
+      "sha256_lf": "ab188a3ae200d61538c72309cd6280de0433d015dfaae8cf8ff063c4b23d3530"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/01-zoomable-agent-dag.svg",
+      "sha256_lf": "c4d92a9800b4679a1445d95ff7ff52931a74c16ba3a8a8a45e9aaad72d6a0647"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/02-telemetry-waterfall.svg",
+      "sha256_lf": "f68d999b049374d80a8d33cec6e026bf29d14ea0506790ec24bc3af8a50e7bac"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/02-time-to-first-win-map.svg",
+      "sha256_lf": "2d0e65dba30bb18e0f3c2603c45fa6dbac2e35f2eb4848a66f28f25749f38c80"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/02-token-streamgraph.svg",
+      "sha256_lf": "0d553ffc39e387830922e40db64614422bd29f40a0537cd3e26c4b86b75694bd"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/03-client-portfolio-pressure.svg",
+      "sha256_lf": "95f5a068d795da35bcee0993752119379f363f32a607808bac3c0b0b9aea89ca"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/03-token-cost-ribbon.svg",
+      "sha256_lf": "3d507a9dcde17c73ef345f93f8d25660b71373a7358b2affe01806da91257f89"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/03-tool-chord-map.svg",
+      "sha256_lf": "185a5d27169a2108c542ac55773bb2250cd762df44cad268eb3b6a86867ea08f"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/04-agent-stage-heatmap.svg",
+      "sha256_lf": "4097e94c71f72827a6b396a1a2ce80c5b058163b203927a4186ae2bafdf0d6a9"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/04-evidence-contour-map.svg",
+      "sha256_lf": "d37fc474259d212625c5ee1d5740d32ac593db7a93477497f7ba90ec93634d8a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/04-sales-signal-radar.svg",
+      "sha256_lf": "d7e8aeb8ee5ca37242a521e9b40d3eeac3ee6ccfec331f7cd6fc4cdb749154f2"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/05-handoff-sankey.svg",
+      "sha256_lf": "b4215c35b3d38963faee22620fcbae4cc269de73d1e05b2ef41f681ad83845c0"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/05-latency-violin-lanes.svg",
+      "sha256_lf": "a0060f6e5d7fb3654a6f6d2a81a82e0733834514e0c3ed789b6656fe442ac0c5"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/05-proof-to-case-study-loop.svg",
+      "sha256_lf": "ff7ad50f6d97fb127588deaf0cea0c73315a5c21a51154c4fc50cb6652c88da8"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/06-radial-proof-timeline.svg",
+      "sha256_lf": "e8f598567b7a5072cc6be3534fbfa351b0e6d94b67a35f80aefcc7a55a4409aa"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/06-roadmap-revenue-streams.svg",
+      "sha256_lf": "c98c143dcb0e1243671724476dd651f0470012df98980a1f353f44fdc81d483b"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/06-run-beeswarm.svg",
+      "sha256_lf": "3ab99727c8a52a3c8e2f39719894d57046575b63bd42c747f8aaff6d38624d3f"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/07-30-day-promise-clock.svg",
+      "sha256_lf": "60ef1e012f6692454dec80a2bd732c1b9dc6a4777c4c4b26f76724153943e340"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/07-code-review-lens.svg",
+      "sha256_lf": "ad7ba90b5e88007acacb1f77acbd535b1660394186b07ee7b42bd59609cb2369"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/07-risk-topographic-funnel.svg",
+      "sha256_lf": "5c5d6a3427b6a300d7dc5b72055b03596001efdbcc1a74479ffb3e1e670ae8a3"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/08-consulting-pipeline-kanban.svg",
+      "sha256_lf": "ee408a73dfcbb20ef4af94e74ca904367e1f0bd8b1a92b7db5356f5b7418bb00"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/08-memory-orbit-map.svg",
+      "sha256_lf": "071ddf932022b04e72a24a373b36bffb29bfd6c5ea5c42206a05128e250184d1"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/08-report-package-minimap.svg",
+      "sha256_lf": "4fad4b867fcf77f3ab2ef7058bcb20f338c2a7068f52d69eaa6cea24b9cdca1e"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/09-eval-uncertainty-fan.svg",
+      "sha256_lf": "5387b7d291d6225b801f13fb557777c36a3b09f4a8520c7fbbcb9a51f6c34050"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/09-proof-funnel-chart.svg",
+      "sha256_lf": "1b6d3f9d3d55d07109d6dbb430a5a00b6c907ac93fc5ff489a10150f8982a461"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/09-vertical-expert-market-map.svg",
+      "sha256_lf": "d800300e06487e27c1562e8b40d2a32fa9256d89799458e69c0c0591d54001b6"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/10-architecture-isobars.svg",
+      "sha256_lf": "91117e6968f5f76bfae6a489c954052201c3d1c18c93da7740aeea869e99781b"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/10-observability-command-center.svg",
+      "sha256_lf": "49a1edd14243042fab495f53034a0fcb9dbf17290bee60f5207809cff6da5b92"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/10-sales-deck-argument-flow.svg",
+      "sha256_lf": "0cce97a39d2dbef386ea1edf4037ff8194f8ff53b28d659024b4bc903e847755"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/11-hermes-runtime-topology.svg",
+      "sha256_lf": "d6e55d18c11874e0fc937b88c5d2f0a932ebf101acb7ee08d4c90a1ae1c108fc"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/12-telegram-message-lifecycle.svg",
+      "sha256_lf": "53629fdbf7d7e2ec15149098dcff71886ca0bf5a7317b6e2fc8a26197cedb5cb"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/13-memory-storage-quadrants.svg",
+      "sha256_lf": "8ff1ceafb51ebc11024fd503e63374debe49181d638252d50d5e13d4e212164c"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/14-gbauto-site-integration-loop.svg",
+      "sha256_lf": "bd22f0ab5dcf471172605b2cb5556834d08b333872986d78addd0e27625d375e"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/15-agent-fleet-control-plane.svg",
+      "sha256_lf": "ccc8c248f1594547273b4e934ca27c23e23adf8840b03ae101081725f8a8ed85"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/16-client-isolation-stack.svg",
+      "sha256_lf": "9d436f8259a429f42df8c016bd6bf579b79b7251ee733f367cfe8ca956f7989c"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/17-observability-data-plane.svg",
+      "sha256_lf": "7c723633368669c400c07e4c3352dcbd3283305290b57cfe926b634998ebe0f6"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/18-tac-agent-team-dag.svg",
+      "sha256_lf": "8788fd46f3dcb532e817e4b37fdbd0c4b6553320818de62a9f17d23fc29e3fff"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/19-secret-handoff-topology.svg",
+      "sha256_lf": "8d7e4b71d1c6deeb3484375f73cf227e5bc04fa51c6e64c2ae6a99ccb075d073"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/20-report-system-architecture.svg",
+      "sha256_lf": "614ce714e86df9f0e6e115ed419fbb9ceeb9826dca3ea024d8227c2cbb772ff9"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--architecture-report--architecture-report-01-system-fit.svg",
+      "sha256_lf": "51f77e3d0a31cb052bbf007ff23c465138820b45c203a202720fe049a789001a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--architecture-report--architecture-report-02-integration-map.svg",
+      "sha256_lf": "a091e599723d4bc7266f628d7b4ffc82a63e088ff51bfa025c183d5cfe8dd941"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--architecture-report--architecture-report-03-change-boundary.svg",
+      "sha256_lf": "45e3b80136176ff5e68862c43fe776a83b3c0906a6c97ca891ebb1fd09a525d7"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--build-report--build-report-01-code-integration.svg",
+      "sha256_lf": "803114d5ddb0e109cd35ac6aa390ab146a8d836ca358982e68a2d91dbc8c70fa"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--build-report--build-report-02-why-this-matters.svg",
+      "sha256_lf": "e4b7b8bf0c06f84a967af4f8ad8a58ea4ecd8a368abe4fd8d953b9c9dcb10e67"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--build-report--build-report-03-proof-next-steps.svg",
+      "sha256_lf": "dc13b8d6515547bacbfd6b20d59fc49a2ea3e270d0db50ba21f91f705f3fd77a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-01-agent-dag.svg",
+      "sha256_lf": "6c36bec6360ed283e8931cafb7aaf4c1d1b121e8a0e7071979f7517d34299c00"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-02-trace-format.svg",
+      "sha256_lf": "ef76d071c2cb2b4bfa27a1541d9f27dec84511e364ab4fa89c5ecbdf7b054797"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--multi-agent-dag-report--multi-agent-dag-report-03-gates-proof.svg",
+      "sha256_lf": "77ed84d0046c0bdb11fb22a8b025b508d1a6e15c911580625b56dd2f245700f7"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--prd--prd-01-product-intent.svg",
+      "sha256_lf": "b5b6d755990af0942d2b154cd14414362c5b42b27bc1853c5ffcb364fb49a81a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--prd--prd-02-requirement-path.svg",
+      "sha256_lf": "50f75298da9f4bff1b5ef5698b60f4a763cd1cd6aaac66df410f41b7d72db159"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--prd--prd-03-approval-readiness.svg",
+      "sha256_lf": "17e46e136c156bd612cba954255fdc74cca38f886f2f7dbb959fe929d61a7e0a"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--sprint-report--sprint-report-01-sprint-goal.svg",
+      "sha256_lf": "5aa02f851cbd8dbff67c66f6fd041808d450f2b6b26b856111c32cac7a96a9cd"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--sprint-report--sprint-report-02-work-in-motion.svg",
+      "sha256_lf": "94c28c1932232c02e85760f8af0e3461abf7ef4609b4d90fa96d45925d4a15ef"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--sprint-report--sprint-report-03-next-proof.svg",
+      "sha256_lf": "4e02a1e3404b5521e3b34a2d728f4fd038a6fa5f024c210e7a032126d4c98804"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--telemetry-report--telemetry-report-01-signal-window.svg",
+      "sha256_lf": "acfe2f1a6b062b6f2ab28649d20358cc9ba7761c0e96d46fc169676b12ccc24d"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--telemetry-report--telemetry-report-02-health-signal.svg",
+      "sha256_lf": "45e5f10a0526e34df66dae7220c7fcef911f4136bd95bfcf40abce8ed30db8ce"
+    },
+    {
+      "path": "second-brain/intelligence/reports/experiments/2026-06-10-svg-template-approval-catalog/svgs/imported/hyperframes--telemetry-report--telemetry-report-03-observability-gap.svg",
+      "sha256_lf": "1c1f54a8dbe2ed85661df785b9fb465ad654d1f0296f3a89870b42aacbca8905"
+    },
+    {
+      "path": "second-brain/systems/brand/gbauto-brand-tokens.md",
+      "sha256_lf": "97bd85a68d6454534dec624b2ecb0ed3f5ab4739e3f032f1817f4d7e0c6b6b92"
+    }
+  ],
+  "duplicate_evidence": {
+    "left": "nexus-analytics-dashboard",
+    "right": "nexus-analytics-landing",
+    "same_main_body": true,
+    "main_body_sha256": "af85a71738384f614bef14fdffe8463a9a84a934ebe5d0932508ee5f80c71643"
+  },
+  "gaps": [
+    {
+      "id": "composer-discovery",
+      "finding": "An approved composer/discovery landing contract exists locally, but its public Atlas template URL returns 404. It is tracked as an additional candidate, not fabricated as a working CRK recipe."
+    },
+    {
+      "id": "dashboard-fixture",
+      "finding": "The analytics-dashboard index item shares its main body with a landing page. Nexora is also a product landing page. The dashboard CSS skin exists, but a dedicated portable analytics/control-plane fixture is still needed."
+    },
+    {
+      "id": "gallery-contracts",
+      "finding": "The four-column text and five-column image contracts are gallery layout variants. Keep their parameter contracts; do not inflate the unique page-format count."
+    },
+    {
+      "id": "renderer-adapters",
+      "finding": "All seven visual lanes now have source references and previews. CRK does not acquire ECharts, Kanban persistence, a scheduling engine, Manim, Mermaid, Three.js, or a Bokeh backend through this sweep."
+    },
+    {
+      "id": "source-maturity",
+      "finding": "The live Gantt sample says PROVEN PROTOTYPE while the local snapshot says Historical. Bokeh remains a PRIVATE PATTERN; motion and Sankey are canonical lanes. Source maturity is separate from CRK operator approval."
+    },
+    {
+      "id": "core-elements",
+      "finding": "Tables, full forms/validation, command drawer, motion/brand effects, richer metadata, and visual adapters are mapped to existing sources; they are not all standalone CRK core components."
+    }
+  ]
+}

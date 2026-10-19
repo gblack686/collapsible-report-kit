@@ -18,6 +18,7 @@ function fixture(t) {
 test('clone leaves the source unchanged, keeps relative assets, and refuses overwrite', t => {
   const root = fixture(t);
   const original = fs.readFileSync(path.join(root, 'examples/basic-report.html'), 'utf8');
+  const initialFormatCount = readCatalog(root).formats.length;
   assert.equal(cloneExample('basic-report', 'quarterly-review', root), 'examples/quarterly-review.html');
   const copy = fs.readFileSync(path.join(root, 'examples/quarterly-review.html'), 'utf8');
   assert.match(copy, /<h1>Quarterly Review<\/h1>/);
@@ -25,7 +26,7 @@ test('clone leaves the source unchanged, keeps relative assets, and refuses over
   assert.equal(fs.readFileSync(path.join(root, 'examples/basic-report.html'), 'utf8'), original);
   assert.equal(readCatalog(root).examples.at(-1).format, 'standard-report');
   const gallery = reviewData(readCatalog(root), root);
-  assert.equal(gallery.formats.length, 3);
+  assert.equal(gallery.formats.length, initialFormatCount);
   assert.equal(gallery.formats[0].examples.length, 8);
   assert.equal(gallery.formats[0].approval, 'pending');
   setRepresentative('standard-report', 'quarterly-review', root);
@@ -93,7 +94,7 @@ test('export preserves complete examples, supports refresh, and refuses unrelate
   const destination = path.join(root, 'dist/guide');
   exportGallery(destination, root);
   const snapshot = JSON.parse(fs.readFileSync(path.join(destination, 'examples/review-data.json'), 'utf8'));
-  assert.equal(snapshot.formats.length, 3);
+  assert.equal(snapshot.formats.length, readCatalog(root).formats.length);
   assert.equal(snapshot.formats[0].examples.length, 7);
   const exported = JSON.parse(fs.readFileSync(path.join(destination, 'crk-export.json'), 'utf8'));
   assert.equal(exported.text_line_endings, 'LF');
@@ -104,6 +105,10 @@ test('export preserves complete examples, supports refresh, and refuses unrelate
   }
   assert.equal(fs.existsSync(path.join(destination, 'src/report-style.js')), true);
   assert.match(fs.readFileSync(path.join(destination, 'atlas-style-library.js'), 'utf8'), /window.CRK_STYLE_LIBRARY/);
+  const native = JSON.parse(fs.readFileSync(path.join(destination, 'atlas-style-library.js'), 'utf8').match(/window.CRK_STYLE_LIBRARY = ([\s\S]*);/)[1]);
+  assert.equal(native.some(item => item.slug === 'crk-standard-report'), true);
+  assert.equal(native.some(item => item.slug === 'crk-visual-chart-pack'), false);
+  assert.equal(native.some(item => item.slug === 'crk-landing-page'), false);
   cloneExample('basic-report', 'variant-b', root);
   exportGallery(destination, root);
   assert.equal(fs.existsSync(path.join(destination, 'examples/variant-b.html')), true);
@@ -129,7 +134,7 @@ test('HTTP preview serves live review data and modules, rejects writes and out-o
   const origin = `http://127.0.0.1:${server.address().port}`;
   const data = await (await fetch(`${origin}/examples/review-data.json`)).json();
   assert.equal(data.schema, 'crk-review-gallery.v1');
-  assert.equal(data.formats.length, 3);
+  assert.equal(data.formats.length, readCatalog(root).formats.length);
   assert.equal(data.formats[0].examples.length, 7);
   const css = await fetch(`${origin}/src/report-style.css`);
   assert.match(css.headers.get('content-type'), /text\/css/);

@@ -19,12 +19,21 @@ It packages the reusable look and feel of a high-signal internal report format w
 
 ## Quick start
 
-To browse and approve the three unique formats, run `just gallery` (Node.js 20.11+ and
+To browse page and embedded visual formats, run `just gallery` (Node.js 20.11+ and
 [just](https://just.systems/); no npm install required). The gallery reuses the
 existing Expert Atlas Style Guide card and preview pattern. Review choices are
 explicit per format and can be exported as a JSON receipt. The standard
-collapsible report contains seven content examples; the artifact library and
-landing gallery are the other two formats. `just formats` shows this distinction.
+collapsible report contains seven content examples. The style-guide sweep adds
+references for landing pages, workspaces, forms, editorial profiles, carousel
+stories, and seven visual formats. `just formats` distinguishes page and visual
+formats; the gallery's Collection filter switches between them.
+
+[Style-guide coverage](docs/style-guide-coverage.md) accounts for all 21 indexed
+surfaces, three approved template contracts, house examples, components, and the
+existing SVG catalogs. `just style-guide-check` checks that map; `just
+style-guide-audit PATH` checks it against a GBAutomation checkout without changing
+the source guide. Source references do not imply that new renderers or private
+backends ship with CRK.
 
 ```sh
 just example-new basic-report quarterly-review

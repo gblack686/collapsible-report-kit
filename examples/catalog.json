@@ -6,21 +6,157 @@
       "title": "Standard collapsible report",
       "description": "One reusable report format: editorial header, section navigation, native collapsible sections, metrics, and evidence. Content, branding, and TAC depth vary within this format.",
       "representative": "basic-report",
-      "approval": "pending"
+      "approval": "pending",
+      "scope": "page",
+      "label": "Report format",
+      "native_style_guide_entry": true
     },
     {
       "id": "artifact-library",
       "title": "Artifact library",
       "description": "Distinct gallery body: editorial heading, count tiles, search and filter toolbar, lifecycle chips, preview-card grid, and inspector. Selected Atlas style reference.",
       "representative": "atlas-artifact-library",
-      "approval": "pending"
+      "approval": "pending",
+      "scope": "page",
+      "label": "Gallery format",
+      "native_style_guide_entry": true
     },
     {
       "id": "landing-gallery",
       "title": "Landing gallery",
       "description": "Distinct landing gallery body: dark image field, Grid/Globe exploration, pan, orbit, zoom, and focus then inspect. Selected Atlas style reference.",
       "representative": "atlas-landing-gallery",
-      "approval": "pending"
+      "approval": "pending",
+      "scope": "page",
+      "label": "Gallery format",
+      "native_style_guide_entry": true
+    },
+    {
+      "id": "landing-page",
+      "title": "Landing / campaign page",
+      "description": "Hero, navigation, value sections, and calls to action. Different subjects share this same page format.",
+      "representative": "nexus-capital-landing",
+      "approval": "pending",
+      "scope": "page",
+      "label": "Landing page",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "interactive-workspace",
+      "title": "Interactive workspace",
+      "description": "A persistent tool rail and canvas with configurable nodes, controls, and outputs. Reuses the existing workflow and Forge workspaces.",
+      "representative": "ai-workflow-interface",
+      "approval": "pending",
+      "scope": "page",
+      "label": "Workspace format",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "onboarding-form",
+      "title": "Onboarding / form page",
+      "description": "A focused input and validation flow with supporting context. Reuses the existing account-initialization page.",
+      "representative": "initialize-account",
+      "approval": "pending",
+      "scope": "page",
+      "label": "Form format",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "editorial-profile",
+      "title": "Editorial profile / resume",
+      "description": "A structured editorial document with profile, skills, experience, and contact information. Reuses the public GBAuto AI resume.",
+      "representative": "editorial-profile",
+      "approval": "pending",
+      "scope": "page",
+      "label": "Document format",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "carousel-story",
+      "title": "Carousel story",
+      "description": "A horizontal sequence of narrative cards designed for swipe-based reading. Reuses the existing productivity carousel.",
+      "representative": "social-productivity-carousel",
+      "approval": "pending",
+      "scope": "page",
+      "label": "Story format",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "visual-chart-pack",
+      "title": "Chart Pack",
+      "description": "Up to six ECharts-style views in one report slot, with compact previews and a full-size modal. Embedded visual format; existing style-guide reference.",
+      "representative": "style-guide-chart-pack",
+      "approval": "pending",
+      "scope": "visual",
+      "label": "Visual format",
+      "source_maturity": "CANONICAL",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "visual-interactive-kanban",
+      "title": "Interactive Kanban",
+      "description": "A calm board summary with clickable tasks, typed gates, and a detail surface for ownership and evidence. Embedded visual format; existing style-guide reference.",
+      "representative": "style-guide-interactive-kanban",
+      "approval": "pending",
+      "scope": "visual",
+      "label": "Visual format",
+      "source_maturity": "CANONICAL",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "visual-gantt-timeline",
+      "title": "Gantt Timeline",
+      "description": "The recovered sprint-report timeline, modernized as an accessible HTML/SVG pattern rather than an approved engine. Embedded visual format; existing style-guide reference.",
+      "representative": "style-guide-gantt-timeline",
+      "approval": "pending",
+      "scope": "visual",
+      "label": "Visual format",
+      "source_maturity": "PROVEN PROTOTYPE",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "visual-manim-motion",
+      "title": "Manim / Motion",
+      "description": "A motion storyboard for the one high-level insight that earns animation. Reports retain a poster and written fallback. Embedded visual format; existing style-guide reference.",
+      "representative": "style-guide-manim-motion",
+      "approval": "pending",
+      "scope": "visual",
+      "label": "Visual format",
+      "source_maturity": "CANONICAL LANE",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "visual-mermaid-dag",
+      "title": "Mermaid DAG",
+      "description": "Timestamped task lineage with a collapsed source receipt and node details that stay readable without a diagram runtime. Embedded visual format; existing style-guide reference.",
+      "representative": "style-guide-mermaid-dag",
+      "approval": "pending",
+      "scope": "visual",
+      "label": "Visual format",
+      "source_maturity": "CANONICAL",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "visual-sankey-flow",
+      "title": "Sankey / 3D Flow",
+      "description": "Use wide paths when flow volume is the point. Three.js adds depth only when it improves stage comprehension. Embedded visual format; existing style-guide reference.",
+      "representative": "style-guide-sankey-flow",
+      "approval": "pending",
+      "scope": "visual",
+      "label": "Visual format",
+      "source_maturity": "CANONICAL LANE",
+      "native_style_guide_entry": false
+    },
+    {
+      "id": "visual-bokeh-crossfilter",
+      "title": "Bokeh Crossfilter",
+      "description": "Server-app interaction grammar: change one dimension and linked metrics, scatter points, and distributions update. Embedded visual format; existing style-guide reference.",
+      "representative": "style-guide-bokeh-crossfilter",
+      "approval": "pending",
+      "scope": "visual",
+      "label": "Visual format",
+      "source_maturity": "PRIVATE PATTERN",
+      "native_style_guide_entry": false
     }
   ],
   "examples": [
@@ -122,6 +258,215 @@
       "preview": "examples/previews/atlas-landing-gallery.jpg",
       "showcase": true,
       "format": "landing-gallery"
+    },
+    {
+      "id": "nexus-capital-landing",
+      "title": "Nexus Capital Landing",
+      "description": "An institutional capital landing page with market data, conviction, and restrained hierarchy. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexus-capital-landing.html",
+      "preview": "examples/previews/nexus-capital-landing.jpg",
+      "showcase": false
+    },
+    {
+      "id": "nexus-analytics-landing",
+      "title": "Nexus Analytics Landing",
+      "description": "A compact analytics product landing page framed around advanced data capabilities. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexus-analytics-landing.html",
+      "preview": "examples/previews/nexus-analytics-landing.jpg",
+      "showcase": false
+    },
+    {
+      "id": "axisform-studio-landing",
+      "title": "Axisform Studio Landing",
+      "description": "A high-contrast studio surface with oversized type, structured modules, and kinetic detail. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/axisform-studio-landing.html",
+      "preview": "examples/previews/axisform-studio-landing.jpg",
+      "showcase": false
+    },
+    {
+      "id": "neon-oiran-landing",
+      "title": "Neon Oiran Campaign",
+      "description": "A cinematic campaign page balancing expressive image treatment with GBAuto controls. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/neon-oiran-landing.html",
+      "preview": "examples/previews/neon-oiran-landing.jpg",
+      "showcase": false
+    },
+    {
+      "id": "aura-vr-landing",
+      "title": "Aura VR Agency",
+      "description": "An immersive agency landing page with layered depth, interactive motion, and bold scale. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/aura-vr-landing.html",
+      "preview": "examples/previews/aura-vr-landing.jpg",
+      "showcase": false
+    },
+    {
+      "id": "nexora-analytics",
+      "title": "Nexora Analytics",
+      "description": "A dense analytical workspace with charting, navigation, and layered data exploration. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "landing-page",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexora-analytics.html",
+      "preview": "examples/previews/nexora-analytics.jpg",
+      "showcase": false
+    },
+    {
+      "id": "ai-workflow-interface",
+      "title": "AI Workflow Interface",
+      "description": "A node-based AI workflow surface for configuring steps, models, and automation paths. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "interactive-workspace",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/ai-workflow-interface.html",
+      "preview": "examples/previews/ai-workflow-interface.jpg",
+      "showcase": false
+    },
+    {
+      "id": "nexus-forge-workspace",
+      "title": "Nexus Forge Workspace",
+      "description": "An interactive graph workspace for connecting entities, evidence, and strategic context. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "interactive-workspace",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/nexus-forge-workspace.html",
+      "preview": "examples/previews/nexus-forge-workspace.jpg",
+      "showcase": false
+    },
+    {
+      "id": "initialize-account",
+      "title": "Initialize Account",
+      "description": "A technical account-initialization flow with clear progress, inputs, and verification states. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "onboarding-form",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/initialize-account.html",
+      "preview": "examples/previews/initialize-account.jpg",
+      "showcase": false
+    },
+    {
+      "id": "social-productivity-carousel",
+      "title": "Social Productivity Carousel",
+      "description": "A social-productivity story told through a horizontal, motion-led card sequence. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "carousel-story",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/social-productivity-carousel.html",
+      "preview": "examples/previews/social-productivity-carousel.jpg",
+      "showcase": false
+    },
+    {
+      "id": "editorial-profile",
+      "title": "GBAuto editorial profile / resume",
+      "description": "Public editorial profile with experience, capabilities, and contact sections. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "editorial-profile",
+      "source_url": "https://gbautomation.xyz/ai-resume",
+      "preview": "examples/previews/editorial-profile.jpg",
+      "showcase": false
+    },
+    {
+      "id": "imaginova-image-gallery",
+      "title": "Imaginova Image Gallery",
+      "description": "A large-format image card gallery with editorial scale and immersive transitions. Existing source reference; no new CRK renderer is claimed.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "artifact-library",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/style-guide/library/imaginova-image-gallery.html",
+      "preview": "examples/previews/imaginova-image-gallery.jpg",
+      "showcase": false
+    },
+    {
+      "id": "style-guide-chart-pack",
+      "title": "Chart Pack - style-guide sample",
+      "description": "Up to six ECharts-style views in one report slot, with compact previews and a full-size modal. Source maturity: CANONICAL. Reference only; no new renderer or private backend is included.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "visual-chart-pack",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "preview": "examples/previews/style-guide-chart-pack.jpg",
+      "showcase": false
+    },
+    {
+      "id": "style-guide-interactive-kanban",
+      "title": "Interactive Kanban - style-guide sample",
+      "description": "A calm board summary with clickable tasks, typed gates, and a detail surface for ownership and evidence. Source maturity: CANONICAL. Reference only; no new renderer or private backend is included.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "visual-interactive-kanban",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "preview": "examples/previews/style-guide-interactive-kanban.jpg",
+      "showcase": false
+    },
+    {
+      "id": "style-guide-gantt-timeline",
+      "title": "Gantt Timeline - style-guide sample",
+      "description": "The recovered sprint-report timeline, modernized as an accessible HTML/SVG pattern rather than an approved engine. Source maturity: PROVEN PROTOTYPE. Reference only; no new renderer or private backend is included.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "visual-gantt-timeline",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "preview": "examples/previews/style-guide-gantt-timeline.jpg",
+      "showcase": false
+    },
+    {
+      "id": "style-guide-manim-motion",
+      "title": "Manim / Motion - style-guide sample",
+      "description": "A motion storyboard for the one high-level insight that earns animation. Reports retain a poster and written fallback. Source maturity: CANONICAL LANE. Reference only; no new renderer or private backend is included.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "visual-manim-motion",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "preview": "examples/previews/style-guide-manim-motion.jpg",
+      "showcase": false
+    },
+    {
+      "id": "style-guide-mermaid-dag",
+      "title": "Mermaid DAG - style-guide sample",
+      "description": "Timestamped task lineage with a collapsed source receipt and node details that stay readable without a diagram runtime. Source maturity: CANONICAL. Reference only; no new renderer or private backend is included.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "visual-mermaid-dag",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "preview": "examples/previews/style-guide-mermaid-dag.jpg",
+      "showcase": false
+    },
+    {
+      "id": "style-guide-sankey-flow",
+      "title": "Sankey / 3D Flow - style-guide sample",
+      "description": "Use wide paths when flow volume is the point. Three.js adds depth only when it improves stage comprehension. Source maturity: CANONICAL LANE. Reference only; no new renderer or private backend is included.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "visual-sankey-flow",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "preview": "examples/previews/style-guide-sankey-flow.jpg",
+      "showcase": false
+    },
+    {
+      "id": "style-guide-bokeh-crossfilter",
+      "title": "Bokeh Crossfilter - style-guide sample",
+      "description": "Server-app interaction grammar: change one dimension and linked metrics, scatter points, and distributions update. Source maturity: PRIVATE PATTERN. Reference only; no new renderer or private backend is included.",
+      "source": "GBAuto Style Guide",
+      "kind": "reference",
+      "format": "visual-bokeh-crossfilter",
+      "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=style-guide",
+      "preview": "examples/previews/style-guide-bokeh-crossfilter.jpg",
+      "showcase": false
     }
   ]
 }

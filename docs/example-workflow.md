@@ -7,7 +7,7 @@ second copy of the report.
 
 ## Formats versus content examples
 
-There are **three unique formats**:
+The original collection had **three page formats**:
 
 | Format | Examples inside it |
 |---|---|
@@ -15,9 +15,12 @@ There are **three unique formats**:
 | Artifact library | The selected Expert Atlas artifact-library reference |
 | Landing gallery | The selected Expert Atlas Grid/Globe reference |
 
-The gallery shows three format cards. The report card's Content example selector
-browses its seven pages. A new quarterly report adds a content example to that
-format; it does not create a fourth format. Approval applies to a format.
+The [style-guide sweep](style-guide-coverage.md) extends the catalog to eight
+page-format families and seven embedded visual formats, using existing source
+references. Use the Collection filter to choose Pages or Visuals. The standard
+report card's Content example selector still browses its seven pages. A new
+quarterly report adds a content example to that format; it does not add another
+format. Approval applies to a format.
 `catalog.formats` defines those choices; every record in `catalog.examples`
 has an explicit `format` ID. Starter/TAC/reference labels describe an example's
 role, not a different format.
@@ -46,8 +49,8 @@ just check
 just gallery
 ```
 
-The gallery opens at `http://127.0.0.1:4173/examples/index.html`. It shows three
-format cards with all nine example pages inside their respective formats. Search
+The gallery opens at `http://127.0.0.1:4173/examples/index.html`. It groups
+source/content examples inside their respective page or visual formats. Search
 matches format names and their content examples. Each format has a preview,
 source page, and explicit review state. New content examples automatically appear
 in their owning format's selector when their catalog entries are added.
@@ -193,10 +196,17 @@ inside the bundle. Exporting does not publish or deploy anything.
 
 The Atlas integration loads `style-guide/library/crk/atlas-style-library.js`
 before `app.js`, spreads `window.CRK_STYLE_LIBRARY` into its existing library,
-and adds a **CRK formats** category and **Review CRK formats** link. Each of the
-three format cards' Review links opens the same collection at `#format=ID`.
+and adds a **CRK formats** category and **Review CRK formats** link. Each
+format card's Review link opens the same collection at `#format=ID`.
 `#format=standard-report&example=basic-report` selects a particular content example. The
 standalone GBAuto Style Guide links to that collection too.
+
+The sweep marks references to existing guide pages and visual panels with
+`native_style_guide_entry: false`. They remain available in the full CRK review
+catalog but are not added back as duplicate cards in the guide's own library.
+The shipped report and two operator-selected Atlas gallery bodies retain their
+native collection entries. The guide remains the source for its other pages,
+components, and visual samples.
 
 After an edit or imported review, run the export again in the same directory,
 validate the consumer, and refresh it. Existing CRK export directories are

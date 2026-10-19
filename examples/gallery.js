@@ -22,9 +22,11 @@ function save() {
 
 function render() {
   const search = q('example-search').value.trim().toLowerCase();
+  const scope = q('format-scope').value;
   const selected = q('example-format').value;
   const status = q('example-status').value;
-  const visible = formats.filter(format => (!selected || format.id === selected) && (!status || statusFor(format) === status) &&
+  const pool = formats.filter(format => !scope || (format.scope || 'page') === scope);
+  const visible = pool.filter(format => (!selected || format.id === selected) && (!status || statusFor(format) === status) &&
     (!search || [format.title, format.description, ...format.examples.flatMap(item => [item.title, item.description, item.source])].join(' ').toLowerCase().includes(search)));
   q('example-grid').innerHTML = visible.map(format => {
     const item = representative(format);
@@ -34,16 +36,18 @@ function render() {
       : `<iframe src="${escapeHTML(sourceFor(item))}" title="${escapeHTML(item.title)} live preview" loading="lazy" sandbox="allow-scripts allow-same-origin" tabindex="-1" aria-hidden="true"></iframe>`;
     return `<article class="style-library-card" data-format-id="${format.id}">
       <button class="style-library-preview" type="button" data-inspect="${format.id}" aria-label="Preview ${escapeHTML(format.title)}">${preview}<span class="preview-label">${item.kind === 'reference' ? 'Selected style reference' : 'Working report format'}</span></button>
-      <div class="style-library-card-body"><p class="crk-eyebrow">${item.kind === 'reference' ? 'Gallery format' : 'Report format'}</p><h3>${escapeHTML(format.title)}</h3><p>${escapeHTML(format.description)}</p>
-      <p class="format-example-count">${format.examples.length > 1 ? `${format.examples.length} content examples · one format` : 'One selected Atlas reference'}</p>
+      <div class="style-library-card-body"><p class="crk-eyebrow">${escapeHTML(format.label || 'Page format')}</p><h3>${escapeHTML(format.title)}</h3><p>${escapeHTML(format.description)}</p>
+      <p class="format-example-count">${format.examples.length > 1 ? `${format.examples.length} content examples · one format` : 'One selected source reference'}</p>
+      ${format.source_maturity ? `<p>Source: ${escapeHTML(format.source_maturity)} · CRK: reference only</p>` : ''}
       <p class="review-state" data-state="${state}">${labels[state]}${decisionFor(format) ? ' · browser decision' : ''}</p>
       <div class="style-library-card-actions"><button type="button" data-inspect="${format.id}">${format.examples.length > 1 ? 'Browse examples & review' : 'Preview & review'}</button><a href="${escapeHTML(sourceFor(item))}" target="_blank" rel="noreferrer">Open page ↗</a></div></div></article>`;
   }).join('');
-  q('example-total').textContent = `${formats.length} unique formats`;
-  q('variant-count').textContent = `${formats.reduce((sum, format) => sum + format.examples.length, 0)} example pages`;
+  q('example-total').textContent = `${formats.filter(format => format.scope !== 'visual').length} page formats`;
+  q('visual-count').textContent = `${formats.filter(format => format.scope === 'visual').length} visual formats`;
+  q('variant-count').textContent = `${formats.reduce((sum, format) => sum + format.examples.length, 0)} source/content examples`;
   const count = formats.filter(format => decisionFor(format)).length;
   q('review-count').textContent = `${count} format decision${count === 1 ? '' : 's'}`;
-  q('gallery-summary').textContent = `${visible.length} of ${formats.length} formats · ${formats.filter(format => statusFor(format) === 'pending').length} pending review`;
+  q('gallery-summary').textContent = `${visible.length} of ${pool.length} ${scope || 'page and visual'} formats · ${pool.filter(format => statusFor(format) === 'pending').length} pending review`;
   q('gallery-empty').hidden = visible.length !== 0;
 }
 
@@ -80,6 +84,13 @@ function decide(decision) {
 }
 
 q('example-grid').addEventListener('click', event => { const button = event.target.closest('[data-inspect]'); if (button) inspect(button.dataset.inspect); });
+function populateFormatFilter() {
+  const scope = q('format-scope').value;
+  const pool = formats.filter(format => !scope || (format.scope || 'page') === scope);
+  q('example-format').innerHTML = '<option value="">All formats</option>' + pool.map(format => `<option value="${format.id}">${escapeHTML(format.title)}</option>`).join('');
+  render();
+}
+q('format-scope').addEventListener('change', populateFormatFilter);
 for (const id of ['example-search', 'example-format', 'example-status']) q(id).addEventListener(id === 'example-search' ? 'input' : 'change', render);
 q('example-variant').addEventListener('change', event => showExample(event.target.value));
 q('approve-example').addEventListener('click', () => decide('approved'));
@@ -104,8 +115,7 @@ try {
   const data = await response.json();
   if (data.schema !== 'crk-review-gallery.v1') throw new Error('Unknown gallery data schema');
   formats = data.formats;
-  q('example-format').innerHTML = '<option value="">All formats</option>' + formats.map(format => `<option value="${format.id}">${escapeHTML(format.title)}</option>`).join('');
-  render();
+  populateFormatFilter();
   const route = new URLSearchParams(location.hash.slice(1));
   const id = route.get('format');
   if (id) inspect(id, route.get('example'));

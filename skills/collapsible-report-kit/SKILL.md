@@ -1,7 +1,7 @@
 ---
 name: collapsible-report-kit
-description: Use when creating a branded but logo-free collapsible HTML report or report bundle with scope approval, implementation evidence, artifact links, and section explanations.
-version: 1.2.0
+description: Use when creating a branded but logo-free collapsible HTML report or report bundle, or reviewing reusable page and embedded visual format references from an existing style guide. Keeps content variants, components, evidence, and source maturity distinct.
+version: 1.3.0
 author: Hermes Agent
 license: MIT
 metadata:
@@ -130,9 +130,15 @@ The reference is authoring guidance. It adds no configuration loader, category s
 
 When browsing, replacing, or extending the kit's examples, read
 [docs/example-workflow.md](../../docs/example-workflow.md). Run `just gallery`
-to open the three unique formats using the existing Expert Atlas Style Guide
+to open page and visual formats using the existing Expert Atlas Style Guide
 card and preview pattern. Group all seven report content examples under
-`standard-report`; the other formats are `artifact-library` and `landing-gallery`.
+`standard-report`; retain the selected `artifact-library` and `landing-gallery`
+bodies. The style-guide sweep adds existing-source page references and seven
+embedded visual formats. Read [the coverage map](../../docs/style-guide-coverage.md)
+when selecting a new format or checking source coverage. Keep pages, visual
+adapters, sections/components, and content variations distinct. Run
+`just style-guide-check`; use `just style-guide-audit PATH` for read-only source
+drift checks. Source maturity does not imply a shipped CRK renderer or operator approval.
 Do not present changes of subject matter or TAC depth as new formats.
 `just formats` lists formats and counts; `just examples` lists content-example
 IDs. `just example-new basic-report NAME`

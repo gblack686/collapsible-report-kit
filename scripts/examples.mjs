@@ -33,6 +33,8 @@ export function validateCatalog(catalog, root = ROOT) {
     if (!slug.test(format.id) || formats.has(format.id)) fail(`Invalid or duplicate format ID: ${format.id}`);
     formats.add(format.id);
     for (const key of ['title', 'description', 'representative']) if (typeof format[key] !== 'string' || !format[key].trim()) fail(`${format.id}: missing ${key}`);
+    if (format.scope !== undefined && !['page', 'visual'].includes(format.scope)) fail(`${format.id}: scope must be page or visual`);
+    if (format.native_style_guide_entry !== undefined && typeof format.native_style_guide_entry !== 'boolean') fail(`${format.id}: native_style_guide_entry must be boolean`);
     if (!['pending', 'approved', 'revise'].includes(format.approval)) fail(`${format.id}: unknown approval state`);
     if (format.approval === 'approved' && !format.review?.fingerprint) fail(`${format.id}: approval requires a format review receipt`);
   }
@@ -205,7 +207,9 @@ export function exportGallery(destination, root = ROOT) {
   }
   const data = reviewData(catalog, root);
   fs.writeFileSync(path.join(dest, 'examples/review-data.json'), JSON.stringify(data, null, 2) + '\n');
-  const atlas = data.formats.map(format => {
+  // Existing guide examples and visual panels already have their own entries.
+  // Keep new source references in the review catalog without duplicating them.
+  const atlas = data.formats.filter(format => format.native_style_guide_entry !== false && format.scope !== 'visual').map(format => {
     const item = format.examples.find(entry => entry.id === format.representative);
     return { slug: `crk-${format.id}`, title: format.title, category: 'crk', label: 'CRK format',
       file: `crk/${item.path || `examples/index.html#format=${format.id}`}`,
@@ -261,7 +265,7 @@ async function main() {
   const id = value(0, 'CRK_ID');
   if (command === 'check') console.log(`Catalog passed: ${catalog.formats.length} formats, ${catalog.examples.length} example pages; all report HTML cataloged.`);
   else if (command === 'list') console.table(catalog.examples.map(({ id, title, format, kind }) => ({ id, title, format, kind })));
-  else if (command === 'formats') console.table(reviewData(catalog).formats.map(({ id, title, examples, approval }) => ({ id, title, examples: examples.length, approval })));
+  else if (command === 'formats') console.table(reviewData(catalog).formats.map(({ id, title, scope, examples, approval }) => ({ id, title, scope: scope || 'page', examples: examples.length, approval })));
   else if (command === 'new') console.log(cloneExample(value(0, 'CRK_BASE'), value(1, 'CRK_ID')));
   else if (command === 'set') { updateExample(id, value(1, 'CRK_FIELD'), value(2, 'CRK_VALUE')); console.log(`Updated ${id}; review reset to pending.`); }
   else if (command === 'representative') { setRepresentative(value(0, 'CRK_FORMAT'), value(1, 'CRK_ID')); console.log('Format preview example updated; format review reset to pending.'); }

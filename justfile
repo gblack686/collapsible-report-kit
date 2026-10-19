@@ -6,6 +6,15 @@ default:
 check:
     node scripts/check-package.mjs
     node scripts/examples.mjs check
+    node scripts/style-guide-audit.mjs
+
+# Check that the sweep covers the catalog and every classified source group.
+style-guide-check:
+    node scripts/style-guide-audit.mjs
+
+# Read-only audit against a GBAutomation checkout; reports changed/missing inputs.
+style-guide-audit $CRK_STYLE_GUIDE_ROOT:
+    node scripts/style-guide-audit.mjs
 
 # List every example and its stable ID.
 examples:
