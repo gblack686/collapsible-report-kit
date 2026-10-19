@@ -1,5 +1,28 @@
 {
   "schema": "crk-examples.v1",
+  "formats": [
+    {
+      "id": "standard-report",
+      "title": "Standard collapsible report",
+      "description": "One reusable report format: editorial header, section navigation, native collapsible sections, metrics, and evidence. Content, branding, and TAC depth vary within this format.",
+      "representative": "basic-report",
+      "approval": "pending"
+    },
+    {
+      "id": "artifact-library",
+      "title": "Artifact library",
+      "description": "Distinct gallery body: editorial heading, count tiles, search and filter toolbar, lifecycle chips, preview-card grid, and inspector. Selected Atlas style reference.",
+      "representative": "atlas-artifact-library",
+      "approval": "pending"
+    },
+    {
+      "id": "landing-gallery",
+      "title": "Landing gallery",
+      "description": "Distinct landing gallery body: dark image field, Grid/Globe exploration, pan, orbit, zoom, and focus then inspect. Selected Atlas style reference.",
+      "representative": "atlas-landing-gallery",
+      "approval": "pending"
+    }
+  ],
   "examples": [
     {
       "id": "basic-report",
@@ -9,8 +32,8 @@
       "kind": "starter",
       "path": "examples/basic-report.html",
       "showcase": false,
-      "approval": "pending",
-      "preview": "examples/previews/basic-report.jpg"
+      "preview": "examples/previews/basic-report.jpg",
+      "format": "standard-report"
     },
     {
       "id": "custom-brand",
@@ -20,8 +43,8 @@
       "kind": "starter",
       "path": "examples/custom-brand.html",
       "showcase": false,
-      "approval": "pending",
-      "preview": "examples/previews/custom-brand.jpg"
+      "preview": "examples/previews/custom-brand.jpg",
+      "format": "standard-report"
     },
     {
       "id": "bundle-report",
@@ -31,8 +54,8 @@
       "kind": "starter",
       "path": "examples/bundle-report.html",
       "showcase": false,
-      "approval": "pending",
-      "preview": "examples/previews/bundle-report.jpg"
+      "preview": "examples/previews/bundle-report.jpg",
+      "format": "standard-report"
     },
     {
       "id": "official-gbauto-tac-plan-template",
@@ -42,8 +65,8 @@
       "kind": "tac",
       "path": "examples/tac-plan-html/official-gbauto-tac-plan-template.html",
       "showcase": false,
-      "approval": "pending",
-      "preview": "examples/previews/official-gbauto-tac-plan-template.jpg"
+      "preview": "examples/previews/official-gbauto-tac-plan-template.jpg",
+      "format": "standard-report"
     },
     {
       "id": "tac-exemplar-library",
@@ -53,8 +76,8 @@
       "kind": "tac",
       "path": "examples/tac-plan-html/tac-exemplar-library.html",
       "showcase": false,
-      "approval": "pending",
-      "preview": "examples/previews/tac-exemplar-library.jpg"
+      "preview": "examples/previews/tac-exemplar-library.jpg",
+      "format": "standard-report"
     },
     {
       "id": "job-outreach-pipeline",
@@ -64,8 +87,8 @@
       "kind": "tac",
       "path": "examples/tac-plan-html/job-outreach-pipeline.html",
       "showcase": false,
-      "approval": "pending",
-      "preview": "examples/previews/job-outreach-pipeline.jpg"
+      "preview": "examples/previews/job-outreach-pipeline.jpg",
+      "format": "standard-report"
     },
     {
       "id": "meet-transcript-pipeline-completion",
@@ -75,8 +98,8 @@
       "kind": "tac",
       "path": "examples/tac-plan-html/meet-transcript-pipeline-completion.html",
       "showcase": false,
-      "approval": "pending",
-      "preview": "examples/previews/meet-transcript-pipeline-completion.jpg"
+      "preview": "examples/previews/meet-transcript-pipeline-completion.jpg",
+      "format": "standard-report"
     },
     {
       "id": "atlas-artifact-library",
@@ -87,7 +110,7 @@
       "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=artifacts",
       "preview": "examples/previews/atlas-artifact-library.jpg",
       "showcase": true,
-      "approval": "pending"
+      "format": "artifact-library"
     },
     {
       "id": "atlas-landing-gallery",
@@ -98,7 +121,7 @@
       "source_url": "https://expert-atlas--gbautoxyz.netlify.app/#view=gallery",
       "preview": "examples/previews/atlas-landing-gallery.jpg",
       "showcase": true,
-      "approval": "pending"
+      "format": "landing-gallery"
     }
   ]
 }

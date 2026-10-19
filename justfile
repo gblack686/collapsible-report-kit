@@ -11,6 +11,14 @@ check:
 examples:
     node scripts/examples.mjs list
 
+# List unique formats separately from their content examples.
+formats:
+    node scripts/examples.mjs formats
+
+# Swap the content example used on a format's main card.
+format-example $CRK_FORMAT $CRK_ID:
+    node scripts/examples.mjs representative
+
 # Open the existing style-guide gallery treatment with all CRK examples.
 gallery $CRK_PORT="4173":
     node scripts/examples.mjs gallery
@@ -39,7 +47,7 @@ preview-image $CRK_ID $CRK_IMAGE:
 export-style-guide $CRK_DEST="dist/style-guide/crk":
     node scripts/examples.mjs export
 
-# Import explicit per-example decisions exported from the review gallery.
+# Import explicit format decisions exported from the review gallery.
 review-apply $CRK_REVIEW:
     node scripts/examples.mjs review
 

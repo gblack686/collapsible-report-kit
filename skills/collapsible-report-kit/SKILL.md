@@ -130,15 +130,19 @@ The reference is authoring guidance. It adds no configuration loader, category s
 
 When browsing, replacing, or extending the kit's examples, read
 [docs/example-workflow.md](../../docs/example-workflow.md). Run `just gallery`
-to open the catalog using the existing Expert Atlas Style Guide card and preview
-pattern. `just examples` lists stable IDs; `just example-new basic-report NAME`
+to open the three unique formats using the existing Expert Atlas Style Guide
+card and preview pattern. Group all seven report content examples under
+`standard-report`; the other formats are `artifact-library` and `landing-gallery`.
+Do not present changes of subject matter or TAC depth as new formats.
+`just formats` lists formats and counts; `just examples` lists content-example
+IDs. `just example-new basic-report NAME`
 creates an editable variation without changing a visual authority file.
 
 Keep `examples/catalog.json` as the source of truth for titles, descriptions,
 preview paths, and showcase selection. Use `just preview-image ID IMAGE` to swap
 a local screenshot. Run `just check`, refresh, and inspect desktop/mobile output.
 An example or shared-style change invalidates its earlier review. Record only
-explicit per-example operator decisions through an exported gallery receipt and
+explicit per-format operator decisions through an exported gallery receipt and
 `just review-apply RECEIPT`; never approve samples on the operator's behalf.
 `just export-style-guide DESTINATION` refreshes the same collection in the
 existing guide. The two Atlas gallery entries are labeled style references,

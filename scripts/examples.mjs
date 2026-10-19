@@ -26,6 +26,15 @@ export function readCatalog(root = ROOT) {
 
 export function validateCatalog(catalog, root = ROOT) {
   if (catalog.schema !== 'crk-examples.v1' || !Array.isArray(catalog.examples) || !catalog.examples.length) fail('Expected a non-empty crk-examples.v1 catalog');
+  if (!Array.isArray(catalog.formats) || !catalog.formats.length) fail('Catalog needs explicit format definitions');
+  const formats = new Set();
+  for (const format of catalog.formats) {
+    if (!slug.test(format.id) || formats.has(format.id)) fail(`Invalid or duplicate format ID: ${format.id}`);
+    formats.add(format.id);
+    for (const key of ['title', 'description', 'representative']) if (typeof format[key] !== 'string' || !format[key].trim()) fail(`${format.id}: missing ${key}`);
+    if (!['pending', 'approved', 'revise'].includes(format.approval)) fail(`${format.id}: unknown approval state`);
+    if (format.approval === 'approved' && !format.review?.fingerprint) fail(`${format.id}: approval requires a format review receipt`);
+  }
   const ids = new Set();
   const paths = new Set();
   for (const item of catalog.examples) {
@@ -33,7 +42,7 @@ export function validateCatalog(catalog, root = ROOT) {
     ids.add(item.id);
     for (const key of ['title', 'description', 'source']) if (typeof item[key] !== 'string' || !item[key].trim()) fail(`${item.id}: missing ${key}`);
     if (!['starter', 'tac', 'reference'].includes(item.kind)) fail(`${item.id}: unknown kind`);
-    if (!['pending', 'approved', 'revise'].includes(item.approval)) fail(`${item.id}: unknown approval state`);
+    if (!formats.has(item.format)) fail(`${item.id}: unknown format`);
     if (typeof item.showcase !== 'boolean') fail(`${item.id}: showcase must be boolean`);
     if (item.source_url && !/^https:\/\/[^\s]+$/.test(item.source_url)) fail(`${item.id}: source_url must use HTTPS`);
     if (item.path) {
@@ -46,8 +55,8 @@ export function validateCatalog(catalog, root = ROOT) {
       if (!/\.(png|jpe?g|webp)$/i.test(item.preview)) fail(`${item.id}: preview must be PNG, JPEG, or WebP`);
       localFile(root, item.preview);
     }
-    if (item.approval === 'approved' && !item.review?.fingerprint) fail(`${item.id}: approval requires a review receipt`);
   }
+  for (const format of catalog.formats) if (!catalog.examples.some(item => item.id === format.representative && item.format === format.id)) fail(`${format.id}: representative must belong to this format`);
   // All shipped report examples must be discoverable, including new files.
   for (const file of fs.readdirSync(path.join(root, 'examples'), { recursive: true })) {
     const relative = `examples/${file.replaceAll('\\', '/')}`;
@@ -66,10 +75,22 @@ export function fingerprint(item, root = ROOT) {
 }
 
 export function reviewData(catalog, root = ROOT) {
-  return { schema: 'crk-review-gallery.v1', examples: catalog.examples.map(item => {
-    const current = fingerprint(item, root);
-    return { ...item, fingerprint: current, approval: item.review?.fingerprint === current ? item.approval : 'pending' };
+  return { schema: 'crk-review-gallery.v1', formats: catalog.formats.map(format => {
+    const examples = catalog.examples.filter(item => item.format === format.id);
+    const current = formatFingerprint(format, catalog, root);
+    return { ...format, fingerprint: current, approval: format.review?.fingerprint === current ? format.approval : 'pending', examples };
   }) };
+}
+
+export function formatFingerprint(format, catalog, root = ROOT) {
+  const { approval, review, ...metadata } = format;
+  return hash(JSON.stringify(metadata) + catalog.examples.filter(item => item.format === format.id).map(item => fingerprint(item, root)).join(''));
+}
+
+function resetFormatReview(catalog, id) {
+  const format = catalog.formats.find(entry => entry.id === id);
+  format.approval = 'pending';
+  delete format.review;
 }
 
 function save(catalog, root) {
@@ -91,7 +112,8 @@ export function cloneExample(base, id, root = ROOT) {
     .replace(/<h1>[\s\S]*?<\/h1>/i, `<h1>${escapeHTML(title)}</h1>`);
   fs.writeFileSync(path.join(root, relative), html, { flag: 'wx' });
   try {
-    catalog.examples.push({ id, title, description: `Draft variation of ${original.title}.`, source: 'CRK', kind: 'starter', path: relative, showcase: false, approval: 'pending' });
+    catalog.examples.push({ id, title, description: `Content variation of ${original.title}; the same standard collapsible format.`, source: 'CRK', kind: 'starter', format: original.format, path: relative, showcase: false });
+    resetFormatReview(catalog, original.format);
     save(catalog, root);
   } catch (error) { fs.unlinkSync(path.join(root, relative)); throw error; }
   return relative;
@@ -104,8 +126,16 @@ export function updateExample(id, field, value, root = ROOT) {
   if (!['title', 'description', 'source', 'source_url', 'showcase'].includes(field)) fail('Editable fields: title, description, source, source_url, showcase');
   if (field === 'showcase' && !['true', 'false'].includes(value)) fail('showcase expects true or false');
   item[field] = field === 'showcase' ? value === 'true' : value;
-  item.approval = 'pending';
-  delete item.review;
+  resetFormatReview(catalog, item.format);
+  save(catalog, root);
+}
+
+export function setRepresentative(formatId, exampleId, root = ROOT) {
+  const catalog = validateCatalog(readCatalog(root), root);
+  const format = catalog.formats.find(entry => entry.id === formatId);
+  if (!format || !catalog.examples.some(item => item.id === exampleId && item.format === formatId)) fail('Choose a content example belonging to that format');
+  format.representative = exampleId;
+  resetFormatReview(catalog, formatId);
   save(catalog, root);
 }
 
@@ -121,21 +151,20 @@ export function replacePreview(id, image, root = ROOT) {
   fs.mkdirSync(path.join(root, 'examples/previews'), { recursive: true });
   fs.writeFileSync(path.join(root, relative), bytes);
   item.preview = relative;
-  item.approval = 'pending';
-  delete item.review;
+  resetFormatReview(catalog, item.format);
   save(catalog, root);
   return relative;
 }
 
 export function applyReview(receipt, root = ROOT) {
   const catalog = validateCatalog(readCatalog(root), root);
-  if (receipt.schema !== 'crk-example-review.v1' || !Array.isArray(receipt.decisions) || !receipt.decisions.length) fail('Expected a non-empty crk-example-review.v1 receipt');
+  if (receipt.schema !== 'crk-format-review.v1' || !Array.isArray(receipt.decisions) || !receipt.decisions.length) fail('Expected a non-empty crk-format-review.v1 receipt');
   const seen = new Set();
   for (const decision of receipt.decisions) {
-    const item = catalog.examples.find(entry => entry.id === decision.id);
+    const item = catalog.formats.find(entry => entry.id === decision.id);
     if (!item || seen.has(decision.id) || !['approved', 'revise'].includes(decision.decision)) fail(`Invalid review decision: ${decision.id}`);
     seen.add(decision.id);
-    if (fingerprint(item, root) !== decision.fingerprint) fail(`Stale review for ${decision.id}; refresh the gallery and review the changed example`);
+    if (formatFingerprint(item, catalog, root) !== decision.fingerprint) fail(`Stale review for ${decision.id}; refresh the gallery and review the changed format`);
     if (decision.note !== undefined && typeof decision.note !== 'string') fail(`Invalid review note: ${decision.id}`);
     item.approval = decision.decision;
     item.review = { fingerprint: decision.fingerprint, note: decision.note || '', recorded_at: new Date().toISOString() };
@@ -170,13 +199,16 @@ export function exportGallery(destination, root = ROOT) {
   }
   const data = reviewData(catalog, root);
   fs.writeFileSync(path.join(dest, 'examples/review-data.json'), JSON.stringify(data, null, 2) + '\n');
-  const atlas = catalog.examples.map(item => ({
-    slug: `crk-${item.id}`, title: item.title, category: 'crk', label: item.kind === 'reference' ? 'CRK gallery reference' : 'CRK example',
-    file: `crk/${item.path || `examples/index.html#example=${item.id}`}`,
-    preview_file: item.preview ? `crk/${item.preview}` : null,
-    review_file: `crk/examples/index.html#example=${item.id}`,
-    description: item.description, tags: [item.kind, data.examples.find(entry => entry.id === item.id).approval],
-  }));
+  const atlas = data.formats.map(format => {
+    const item = format.examples.find(entry => entry.id === format.representative);
+    return { slug: `crk-${format.id}`, title: format.title, category: 'crk', label: 'CRK format',
+      file: `crk/${item.path || `examples/index.html#format=${format.id}`}`,
+      preview_file: item.preview ? `crk/${item.preview}` : null,
+      review_file: `crk/examples/index.html#format=${format.id}`,
+      description: format.description,
+      tags: [format.examples.length > 1 ? `${format.examples.length} content examples` : 'Selected style reference', format.approval],
+    };
+  });
   fs.writeFileSync(path.join(dest, 'atlas-style-library.js'), `// Generated from CRK examples/catalog.json; refresh with just export-style-guide.\nwindow.CRK_STYLE_LIBRARY = ${JSON.stringify(atlas, null, 2)};\n`);
   fs.writeFileSync(path.join(dest, 'index.html'), '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=examples/index.html"><title>CRK examples</title><a href="examples/index.html">Open CRK example gallery</a>\n');
   fs.writeFileSync(marker, JSON.stringify({ schema: 'crk-style-guide-export.v1', source: 'https://github.com/gblack686/collapsible-report-kit', files: [...files].map(file => ({ path: file, sha256: hash(fs.readFileSync(localFile(root, file))) })) }, null, 2) + '\n');
@@ -221,15 +253,19 @@ async function main() {
   const value = (index, name, fallback) => args[index] ?? process.env[name] ?? fallback;
   const catalog = validateCatalog(readCatalog(), ROOT);
   const id = value(0, 'CRK_ID');
-  if (command === 'check') console.log(`Catalog passed: ${catalog.examples.length} examples; all report HTML cataloged.`);
-  else if (command === 'list') console.table(reviewData(catalog).examples.map(({ id, title, kind, approval }) => ({ id, title, kind, approval })));
+  if (command === 'check') console.log(`Catalog passed: ${catalog.formats.length} formats, ${catalog.examples.length} example pages; all report HTML cataloged.`);
+  else if (command === 'list') console.table(catalog.examples.map(({ id, title, format, kind }) => ({ id, title, format, kind })));
+  else if (command === 'formats') console.table(reviewData(catalog).formats.map(({ id, title, examples, approval }) => ({ id, title, examples: examples.length, approval })));
   else if (command === 'new') console.log(cloneExample(value(0, 'CRK_BASE'), value(1, 'CRK_ID')));
   else if (command === 'set') { updateExample(id, value(1, 'CRK_FIELD'), value(2, 'CRK_VALUE')); console.log(`Updated ${id}; review reset to pending.`); }
+  else if (command === 'representative') { setRepresentative(value(0, 'CRK_FORMAT'), value(1, 'CRK_ID')); console.log('Format preview example updated; format review reset to pending.'); }
   else if (command === 'image') console.log(replacePreview(id, value(1, 'CRK_IMAGE')));
   else if (command === 'export') console.log(exportGallery(value(0, 'CRK_DEST', 'dist/style-guide/crk')));
   else if (command === 'review') console.log(`Recorded ${applyReview(JSON.parse(fs.readFileSync(value(0, 'CRK_REVIEW'), 'utf8')))} explicit decisions.`);
   else if (['serve', 'preview', 'gallery'].includes(command)) {
-    const item = command === 'preview' ? catalog.examples.find(entry => entry.id === (id || 'basic-report')) : null;
+    const requested = id || 'basic-report';
+    const format = catalog.formats.find(entry => entry.id === requested);
+    const item = command === 'preview' ? catalog.examples.find(entry => entry.id === (format?.representative || requested)) : null;
     if (command === 'preview' && !item) fail(`Unknown example: ${id}`);
     const port = Number(value(command === 'preview' ? 1 : 0, 'CRK_PORT', '4173'));
     if (!Number.isInteger(port) || port < 1 || port > 65535) fail('Port must be an integer from 1 to 65535');
@@ -242,7 +278,7 @@ async function main() {
     });
     process.on('SIGINT', () => server.close());
     process.on('SIGTERM', () => server.close());
-  } else fail('Commands: check, list, gallery, preview, serve, new, set, image, export, review');
+  } else fail('Commands: check, list, formats, gallery, preview, serve, new, set, representative, image, export, review');
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {

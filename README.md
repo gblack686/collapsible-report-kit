@@ -19,10 +19,12 @@ It packages the reusable look and feel of a high-signal internal report format w
 
 ## Quick start
 
-To browse and approve every example, run `just gallery` (Node.js 20.11+ and
+To browse and approve the three unique formats, run `just gallery` (Node.js 20.11+ and
 [just](https://just.systems/); no npm install required). The gallery reuses the
 existing Expert Atlas Style Guide card and preview pattern. Review choices are
-explicit per example and can be exported as a JSON receipt.
+explicit per format and can be exported as a JSON receipt. The standard
+collapsible report contains seven content examples; the artifact library and
+landing gallery are the other two formats. `just formats` shows this distinction.
 
 ```sh
 just example-new basic-report quarterly-review

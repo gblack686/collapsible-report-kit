@@ -23,6 +23,9 @@
 .review-state{display:inline-flex;align-self:start;padding:4px 8px;border-radius:6px;background:var(--crk-panel)}
 .review-state[data-state=approved]{color:#2d7142;background:#e4f3e8}
 .review-state[data-state=revise]{color:#82580e;background:#fff0d8}
+.format-example-count{font-weight:600}
+#variant-selector[hidden]{display:none}
+#example-variant{width:100%;padding:9px;border:1px solid var(--crk-line);border-radius:6px;background:var(--crk-bg);color:var(--crk-ink);font:inherit}
 #example-inspector{width:min(1180px,95vw);max-height:94vh;padding:22px;border:1px solid var(--crk-line);border-radius:10px;background:var(--crk-bg);color:var(--crk-ink);overflow:auto}
 #example-inspector::backdrop{background:#19191988}
 .inspector-head{display:flex;justify-content:space-between;align-items:center;gap:15px}
