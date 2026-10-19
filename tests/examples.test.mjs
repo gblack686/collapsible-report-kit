@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { once } from 'node:events';
+import crypto from 'node:crypto';
 import { ROOT, readCatalog, validateCatalog, cloneExample, updateExample, setRepresentative, replacePreview, fingerprint, formatFingerprint, applyReview, reviewData, exportGallery, createPreviewServer } from '../scripts/examples.mjs';
 
 function fixture(t) {
@@ -59,6 +60,12 @@ test('review import binds exact content, rejects stale mixed receipts without pa
   const root = fixture(t);
   const catalog = readCatalog(root);
   const [a, b] = catalog.formats;
+  const beforeEOL = formatFingerprint(a, catalog, root);
+  for (const file of [catalog.examples[0].path, 'src/report-style.css', 'src/report-style.js']) {
+    const text = fs.readFileSync(path.join(root, file), 'utf8').replaceAll('\r\n', '\n');
+    fs.writeFileSync(path.join(root, file), text.replaceAll('\n', '\r\n'));
+  }
+  assert.equal(formatFingerprint(a, catalog, root), beforeEOL);
   const receipt = { schema: 'crk-format-review.v1', decisions: [a, b].map(format => ({ id: format.id, decision: 'approved', fingerprint: formatFingerprint(format, catalog, root), note: 'Operator reviewed' })) };
   const bExample = catalog.examples.find(item => item.format === b.id);
   fs.appendFileSync(path.join(root, bExample.preview), 'changed preview');
@@ -88,6 +95,13 @@ test('export preserves complete examples, supports refresh, and refuses unrelate
   const snapshot = JSON.parse(fs.readFileSync(path.join(destination, 'examples/review-data.json'), 'utf8'));
   assert.equal(snapshot.formats.length, 3);
   assert.equal(snapshot.formats[0].examples.length, 7);
+  const exported = JSON.parse(fs.readFileSync(path.join(destination, 'crk-export.json'), 'utf8'));
+  assert.equal(exported.text_line_endings, 'LF');
+  for (const file of exported.files) {
+    const bytes = fs.readFileSync(path.join(destination, file.path));
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'), file.sha256);
+    if (/\.(html|css|js|json)$/.test(file.path)) assert.equal(bytes.includes(Buffer.from('\r\n')), false);
+  }
   assert.equal(fs.existsSync(path.join(destination, 'src/report-style.js')), true);
   assert.match(fs.readFileSync(path.join(destination, 'atlas-style-library.js'), 'utf8'), /window.CRK_STYLE_LIBRARY/);
   cloneExample('basic-report', 'variant-b', root);

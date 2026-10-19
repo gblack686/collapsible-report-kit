@@ -9,6 +9,7 @@ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 const CATALOG = 'examples/catalog.json';
 const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
+const textBytes = bytes => Buffer.from(bytes.toString('utf8').replaceAll('\r\n', '\n'));
 const fail = message => { throw new Error(message); };
 const escapeHTML = value => value.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -68,9 +69,10 @@ export function validateCatalog(catalog, root = ROOT) {
 export function fingerprint(item, root = ROOT) {
   const { approval, review, ...metadata } = item;
   const digest = crypto.createHash('sha256').update(JSON.stringify(metadata));
-  for (const file of [item.path, item.preview]) if (file) digest.update(fs.readFileSync(localFile(root, file)));
+  if (item.path) digest.update(textBytes(fs.readFileSync(localFile(root, item.path))));
+  if (item.preview) digest.update(fs.readFileSync(localFile(root, item.preview)));
   // Report behavior and branding changes also require a fresh review.
-  for (const file of ['src/report-style.css', 'src/report-style.js']) digest.update(fs.readFileSync(localFile(root, file)));
+  for (const file of ['src/report-style.css', 'src/report-style.js']) digest.update(textBytes(fs.readFileSync(localFile(root, file))));
   return digest.digest('hex');
 }
 
@@ -192,10 +194,14 @@ export function exportGallery(destination, root = ROOT) {
     if (hash(fs.readFileSync(target)) !== old.sha256) fail(`Obsolete exported file was edited: ${old.path}. Preserve it before re-exporting.`);
     obsolete.push(target);
   }
+  const exportedBytes = new Map();
   for (const file of files) {
     const target = path.join(dest, file);
     fs.mkdirSync(path.dirname(target), { recursive: true });
-    fs.copyFileSync(localFile(root, file), target);
+    const source = fs.readFileSync(localFile(root, file));
+    const bytes = /\.(html|css|js|json)$/.test(file) || file === 'LICENSE' ? textBytes(source) : source;
+    fs.writeFileSync(target, bytes);
+    exportedBytes.set(file, bytes);
   }
   const data = reviewData(catalog, root);
   fs.writeFileSync(path.join(dest, 'examples/review-data.json'), JSON.stringify(data, null, 2) + '\n');
@@ -211,7 +217,7 @@ export function exportGallery(destination, root = ROOT) {
   });
   fs.writeFileSync(path.join(dest, 'atlas-style-library.js'), `// Generated from CRK examples/catalog.json; refresh with just export-style-guide.\nwindow.CRK_STYLE_LIBRARY = ${JSON.stringify(atlas, null, 2)};\n`);
   fs.writeFileSync(path.join(dest, 'index.html'), '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=examples/index.html"><title>CRK examples</title><a href="examples/index.html">Open CRK example gallery</a>\n');
-  fs.writeFileSync(marker, JSON.stringify({ schema: 'crk-style-guide-export.v1', source: 'https://github.com/gblack686/collapsible-report-kit', files: [...files].map(file => ({ path: file, sha256: hash(fs.readFileSync(localFile(root, file))) })) }, null, 2) + '\n');
+  fs.writeFileSync(marker, JSON.stringify({ schema: 'crk-style-guide-export.v1', source: 'https://github.com/gblack686/collapsible-report-kit', text_line_endings: 'LF', files: [...files].map(file => ({ path: file, sha256: hash(exportedBytes.get(file)) })) }, null, 2) + '\n');
   for (const target of obsolete) fs.unlinkSync(target);
   return dest;
 }
